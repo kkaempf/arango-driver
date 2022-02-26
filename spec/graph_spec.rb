@@ -110,7 +110,7 @@ describe Arango::Graph do
       rescue Arango::Error => e
         message = e.message
       end
-      expect(message).to include 'not be found'
+      expect(message).to include 'not found'
     end
 
     it "revision" do
