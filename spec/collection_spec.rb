@@ -123,7 +123,7 @@ describe Arango::DocumentCollection do
       rescue Arango::Error => e
         val = e.message
       end
-      expect(val).to eq "Collection name is existing!"
+      expect(val).to eq "duplicate name"
     end
 
     it "reload the Collection" do
