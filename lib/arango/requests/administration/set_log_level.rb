@@ -14,6 +14,7 @@ module Arango
         body :authentication
         body :authorization
         body :backup
+        body :bench
         body :cache
         body :cluster
         body :clustercomm
@@ -32,6 +33,7 @@ module Arango
         body :heartbeat
         body :httpclient
         body :ldap
+        body :license
         body :libiresearch
         body :maintenance
         body :memory
