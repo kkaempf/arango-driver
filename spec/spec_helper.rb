@@ -2,7 +2,7 @@ require "ostruct"
 require "benchmark/ips"
 require "rspec"
 require "simplecov"
-SimpleCov.start
+SimpleCov.start rescue nil
 require "arango-driver"
 
 module Helpers
