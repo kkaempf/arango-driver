@@ -49,7 +49,8 @@ module Arango
             data: { response: response_body, request: JSON.pretty_generate(options) }
         end
 #        STDERR.puts "json_result #{json_result.class}:#{json_result.inspect}"
-        if json_result[:error] == true
+        # json_result is an Array when multiple entries are involved
+        if json_result.is_a?(Hash) && json_result[:error] == true
           raise Arango::Error.new(json_result[:errorMessage], err: json_result[:errorNum])
         end
 
