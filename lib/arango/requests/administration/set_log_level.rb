@@ -41,7 +41,9 @@ module Arango
         body :performance
         body :pregel
         body :queries
+        body :rep_state
         body :replication
+        body :replication2
         body :requests
         body :restore
         body :rocksdb
@@ -57,7 +59,6 @@ module Arango
         body :v8
         body :validation
         body :views
-
         code 200, :success
         code 400, "Request body invalid!"
         code 405, "Invalid request method!"
