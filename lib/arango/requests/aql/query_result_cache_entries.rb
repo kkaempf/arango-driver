@@ -2,7 +2,7 @@ module Arango
   module Requests
     module AQL
       class QueryResultCacheEntries < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_api/query-cache/entries"
 

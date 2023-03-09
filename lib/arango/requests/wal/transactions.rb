@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Wal
       class Transactions < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_admin/wal/transactions"
 

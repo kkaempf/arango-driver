@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Document
       class CreateMultiple < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = '{/dbcontext}/_api/document/{collection}#multiple'
 

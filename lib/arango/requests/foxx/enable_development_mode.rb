@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Foxx
       class EnableDevelopmentMode < Arango::Request
-        request_method :enable
+        self.request_method = :enable
 
         self.uri_template = '{/dbcontext}/_api/foxx/development'
 

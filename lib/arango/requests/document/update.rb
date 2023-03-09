@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Document
       class Update < Arango::Request
-        request_method :patch
+        self.request_method = :patch
 
         self.uri_template = '{/dbcontext}/_api/document/{collection}/{key}'
 

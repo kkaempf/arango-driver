@@ -2,7 +2,7 @@ module Arango
   module Requests
     module GraphEdges
       class Read < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = '{/dbcontext}/_api/edges/{id}'
 

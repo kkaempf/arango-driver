@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Job
       class Delete < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = '{/dbcontext}/_api/job/{type}#by_type'
 

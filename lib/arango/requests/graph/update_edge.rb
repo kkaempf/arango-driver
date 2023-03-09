@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Graph
       class UpdateEdge < Arango::Request
-        request_method :patch
+        self.request_method = :patch
 
         self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
 

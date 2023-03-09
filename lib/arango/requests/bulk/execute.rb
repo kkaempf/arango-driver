@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Bulk
       class Execute < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_api/batch"
 

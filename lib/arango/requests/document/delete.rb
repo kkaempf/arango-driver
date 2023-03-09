@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Document
       class Delete < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = '{/dbcontext}/_api/document/{collection}/{key}'
 

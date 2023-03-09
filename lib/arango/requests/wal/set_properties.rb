@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Wal
       class SetProperties < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = "/_admin/wal/properties"
 

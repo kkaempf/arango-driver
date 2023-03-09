@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Cluster
       class Statistics < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_admin/backup/create"
 

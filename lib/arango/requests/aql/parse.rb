@@ -2,7 +2,7 @@ module Arango
   module Requests
     module AQL
       class Parse < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_api/query"
 

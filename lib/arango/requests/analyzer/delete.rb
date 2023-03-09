@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Analyzer
       class Delete < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = "/_api/analyzer/{name}"
 

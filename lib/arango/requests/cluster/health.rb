@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Cluster
       class Health < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_admin/cluster/health"
 

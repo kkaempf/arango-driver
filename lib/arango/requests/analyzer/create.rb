@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Analyzer
       class Create < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_api/analyzer"
 

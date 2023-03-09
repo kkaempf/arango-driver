@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Administration
       class CreateTask < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_api/tasks"
 

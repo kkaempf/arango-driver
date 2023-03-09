@@ -2,7 +2,7 @@ module Arango
   module Requests
     module View
       class SetSearchViewProperties < Arango::Request
-        request_method :out
+        self.request_method = :out
 
         self.uri_template = '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
 

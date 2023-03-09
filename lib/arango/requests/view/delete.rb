@@ -2,7 +2,7 @@ module Arango
   module Requests
     module View
       class Delete < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = '{/dbcontext}/_api/view/{name}'
 

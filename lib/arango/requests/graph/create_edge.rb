@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Graph
       class CreateEdge < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}'
 

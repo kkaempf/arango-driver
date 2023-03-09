@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Graph
       class ReplaceEdge < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
 

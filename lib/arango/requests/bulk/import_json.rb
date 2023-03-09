@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Bulk
       class ImportJson < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_api/import#json"
 

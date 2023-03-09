@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Administration
       class Metrics < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_admin/metrics"
 

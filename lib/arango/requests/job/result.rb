@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Job
       class Result < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = '{/dbcontext}/_api/job/{id}'
 

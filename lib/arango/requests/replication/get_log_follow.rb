@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Replication
       class GetLogFollow < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = '{/dbcontext}/_api/replication/logger-follow'
 

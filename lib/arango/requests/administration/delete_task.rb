@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Administration
       class DeleteTasks < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = "/_api/tasks/{id}"
 

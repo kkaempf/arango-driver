@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Graph
       class RemoveVertexCollections < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}'
 

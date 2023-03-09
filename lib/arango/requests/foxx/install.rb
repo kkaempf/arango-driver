@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Foxx
       class Install < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = '{/dbcontext}/_api/foxx/service'
 

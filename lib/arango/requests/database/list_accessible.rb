@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Database
       class ListAccessible < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = '{/dbcontext}/_api/database/user'
 

@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Document
       class Head < Arango::Request
-        request_method :head
+        self.request_method = :head
 
         self.uri_template = '{/dbcontext}/_api/document/{collection}/{key}'
 

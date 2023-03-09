@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Document
       class ReplaceMultiple < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = '{/dbcontext}/_api/document/{collection}'
 

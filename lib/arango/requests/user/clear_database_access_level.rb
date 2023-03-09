@@ -2,7 +2,7 @@ module Arango
   module Requests
     module User
       class ClearDatabaseAccessLevel < Arango::Request
-        request_method :delete
+        self.request_method = :delete
 
         self.uri_template = '{/dbcontext}/_api/user/{user}/database/{database}'
 

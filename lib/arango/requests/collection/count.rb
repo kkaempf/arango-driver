@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Collection
       class Count < Arango::Request
-        request_method :get
+        self.request_method = :get
 
         self.uri_template = "/_api/collection/{name}/count"
 

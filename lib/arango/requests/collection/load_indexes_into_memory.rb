@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Collection
       class LoadIndexesIntoMemory < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = "/_api/collection/{name}/loadIndexesIntoMemory"
 

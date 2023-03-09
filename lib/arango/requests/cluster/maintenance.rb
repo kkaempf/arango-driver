@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Cluster
       class Maintenance < Arango::Request
-        request_method :put
+        self.request_method = :put
 
         self.uri_template = "/_admin/cluster/maintenance"
 

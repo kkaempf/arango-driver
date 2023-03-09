@@ -2,7 +2,7 @@ module Arango
   module Requests
     module Backup
       class Download < Arango::Request
-        request_method :post
+        self.request_method = :post
 
         self.uri_template = "/_admin/backup/download"
 
