@@ -84,7 +84,7 @@ describe Arango::DocumentCollection do
       collections = @database.all_collections
       list = collections.map(&:name)
       expect(list).to include("MyCollection")
-      expect(collections.first.class).to be Arango::DocumentCollection::Base
+      expect(collections.map(&:class)).to include Arango::DocumentCollection::Base
     end
   end
 
