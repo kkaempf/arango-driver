@@ -4,7 +4,7 @@ module Arango
       class ProlongDumpBatch < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/replication/batch/{id}'
+        self.uri_template = '{/dbcontext}/_api/replication/batch/{id}'
 
         body :ttl
 

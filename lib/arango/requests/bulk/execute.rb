@@ -4,7 +4,7 @@ module Arango
       class Execute < Arango::Request
         request_method :post
 
-        uri_template "/_api/batch"
+        self.uri_template = "/_api/batch"
 
         # TODO
         # body_is_string

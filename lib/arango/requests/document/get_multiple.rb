@@ -4,7 +4,7 @@ module Arango
       class GetMultiple < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/document/{collection}#get'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}#get'
 
         param :onlyget, :required
         param :ignore_revs

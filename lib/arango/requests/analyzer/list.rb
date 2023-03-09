@@ -4,7 +4,7 @@ module Arango
       class List < Arango::Request
         request_method :get
 
-        uri_template "/_api/analyzer"
+        self.uri_template = "/_api/analyzer"
 
         code 200, :success
       end

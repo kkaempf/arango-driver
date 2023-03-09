@@ -4,7 +4,7 @@ module Arango
       class RunScript < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/foxx/scripts/{name}'
+        self.uri_template = '{/dbcontext}/_api/foxx/scripts/{name}'
 
         param :mount
 

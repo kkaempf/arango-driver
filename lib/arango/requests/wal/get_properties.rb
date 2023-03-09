@@ -4,7 +4,7 @@ module Arango
       class GetProperties < Arango::Request
         request_method :get
 
-        uri_template "/_admin/wal/properties"
+        self.uri_template = "/_admin/wal/properties"
 
         code 200, :success
         code 405, "Invalid HTTP method!"

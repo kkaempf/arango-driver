@@ -4,7 +4,7 @@ module Arango
       class SetApplierConfig < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/replication/applier-config'
+        self.uri_template = '{/dbcontext}/_api/replication/applier-config'
 
         body :adaptive_polling
         body :auto_resync

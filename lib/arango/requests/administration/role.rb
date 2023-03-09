@@ -4,7 +4,7 @@ module Arango
       class Role < Arango::Request
         request_method :get
 
-        uri_template "/_admin/server/role"
+        self.uri_template = "/_admin/server/role"
 
         code 200, :success
       end

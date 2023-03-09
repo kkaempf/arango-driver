@@ -4,7 +4,7 @@ module Arango
       class ImportJson < Arango::Request
         request_method :post
 
-        uri_template "/_api/import#json"
+        self.uri_template = "/_api/import#json"
 
         param :collection, :required
         param :type, :required

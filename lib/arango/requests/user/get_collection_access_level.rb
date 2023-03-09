@@ -4,7 +4,7 @@ module Arango
       class GetCollectionAccessLevel < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
+        self.uri_template = '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
 
         code 200, :success
         code 400, "Wrong access privileges!"

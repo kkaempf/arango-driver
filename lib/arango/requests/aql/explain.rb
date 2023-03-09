@@ -4,7 +4,7 @@ module Arango
       class Explain < Arango::Request
         request_method :post
 
-        uri_template "/_api/explain"
+        self.uri_template = "/_api/explain"
 
         body :bind_vars
         body :query

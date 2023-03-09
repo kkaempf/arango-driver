@@ -4,7 +4,7 @@ module Arango
       class UpdateVertex < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}'
 
         header 'if-match'
 

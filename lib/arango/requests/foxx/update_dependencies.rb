@@ -4,7 +4,7 @@ module Arango
       class UpdateDependencies < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/foxx/dependencies'
+        self.uri_template = '{/dbcontext}/_api/foxx/dependencies'
 
         param :mount, :required
 

@@ -4,7 +4,7 @@ module Arango
       class GetEdge < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
 
         header 'if-match'
         header 'if-none-match'

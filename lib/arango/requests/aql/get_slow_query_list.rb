@@ -4,7 +4,7 @@ module Arango
       class GetSlowQueryList < Arango::Request
         request_method :get
 
-        uri_template "/_api/query/slow"
+        self.uri_template = "/_api/query/slow"
 
         code 200, :success
         code 400, "Malformed request!"

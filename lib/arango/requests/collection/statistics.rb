@@ -4,7 +4,7 @@ module Arango
       class Statistics < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/figures"
+        self.uri_template = "/_api/collection/{name}/figures"
 
         code 200, :success
         code 400, "Collection name is missing!"

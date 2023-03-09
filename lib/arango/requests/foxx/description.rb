@@ -4,7 +4,7 @@ module Arango
       class Description < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx/service'
+        self.uri_template = '{/dbcontext}/_api/foxx/service'
 
         param :mount, :required
 

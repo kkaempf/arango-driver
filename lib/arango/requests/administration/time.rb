@@ -4,7 +4,7 @@ module Arango
       class Time < Arango::Request
         request_method :get
 
-        uri_template "/_admin/time"
+        self.uri_template = "/_admin/time"
 
         code 200, :success
       end

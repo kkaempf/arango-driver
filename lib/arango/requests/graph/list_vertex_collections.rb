@@ -4,7 +4,7 @@ module Arango
       class ListVertexCollections < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex'
 
         code 200, :success
         code 404, "Graph could not be found!"

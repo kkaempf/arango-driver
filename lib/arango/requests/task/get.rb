@@ -4,7 +4,7 @@ module Arango
       class Get < Arango::Request
         request_method :get
 
-        uri_template '/_api/tasks/{id}'
+        self.uri_template = '/_api/tasks/{id}'
 
         code 200, :success
         code 404, "Task #{@id} not found"

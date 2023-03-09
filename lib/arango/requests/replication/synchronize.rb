@@ -4,7 +4,7 @@ module Arango
       class Synchronize < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/replication/sync'
+        self.uri_template = '{/dbcontext}/_api/replication/sync'
 
         body :database
         body :endpoint

@@ -4,7 +4,7 @@ module Arango
       class List < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/list"
+        self.uri_template = "/_admin/backup/list"
 
         body :id
 

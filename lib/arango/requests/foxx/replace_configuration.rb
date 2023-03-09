@@ -4,7 +4,7 @@ module Arango
       class ReplaceConfiguration < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/foxx/configuration'
+        self.uri_template = '{/dbcontext}/_api/foxx/configuration'
 
         param :mount, :required
 

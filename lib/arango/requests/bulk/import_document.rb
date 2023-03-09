@@ -4,7 +4,7 @@ module Arango
       class ImportDocument < Arango::Request
         request_method :post
 
-        uri_template "/_api/import#document"
+        self.uri_template = "/_api/import#document"
 
         param :collection, :required
         param :complete

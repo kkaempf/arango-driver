@@ -4,7 +4,7 @@ module Arango
       class KillQuery < Arango::Request
         request_method :delete
 
-        uri_template "/_api/query/{id}"
+        self.uri_template = "/_api/query/{id}"
 
         code 200, :success
         code 400, "Malformed request!"

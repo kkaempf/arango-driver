@@ -4,7 +4,7 @@ module Arango
       class Statistics < Arango::Request
         request_method :get
 
-        uri_template "/_admin/backup/create"
+        self.uri_template = "/_admin/backup/create"
 
         # TODO db_server -> DBserver
         param :db_server

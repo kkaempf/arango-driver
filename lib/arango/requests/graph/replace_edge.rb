@@ -4,7 +4,7 @@ module Arango
       class ReplaceEdge < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
 
         header 'if-match'
 

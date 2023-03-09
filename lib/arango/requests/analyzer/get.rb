@@ -4,7 +4,7 @@ module Arango
       class List < Arango::Request
         request_method :get
 
-        uri_template "/_api/analyzer/{name}"
+        self.uri_template = "/_api/analyzer/{name}"
 
         code 200, :success
         code 404, "Analyzer does not exist!"

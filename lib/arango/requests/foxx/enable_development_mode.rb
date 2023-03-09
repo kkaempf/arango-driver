@@ -4,7 +4,7 @@ module Arango
       class EnableDevelopmentMode < Arango::Request
         request_method :enable
 
-        uri_template '{/dbcontext}/_api/foxx/development'
+        self.uri_template = '{/dbcontext}/_api/foxx/development'
 
         param :mount, :required
 

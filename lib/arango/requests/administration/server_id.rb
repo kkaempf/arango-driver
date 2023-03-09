@@ -4,7 +4,7 @@ module Arango
       class ServerId < Arango::Request
         request_method :get
 
-        uri_template "/_admin/server/id"
+        self.uri_template = "/_admin/server/id"
 
         code 200, :success
         code 500, "Server is not running in cluster mode!"

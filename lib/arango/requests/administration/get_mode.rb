@@ -4,7 +4,7 @@ module Arango
       class GetMode < Arango::Request
         request_method :get
 
-        uri_template "/_admin/server/mode"
+        self.uri_template = "/_admin/server/mode"
 
         code 200, :success
       end

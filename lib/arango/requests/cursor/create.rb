@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template "/_api/cursor"
+        self.uri_template = "/_api/cursor"
 
         body :batch_size
         body :bind_vars

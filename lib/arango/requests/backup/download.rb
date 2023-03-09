@@ -4,7 +4,7 @@ module Arango
       class Download < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/download"
+        self.uri_template = "/_admin/backup/download"
 
         body :abort
         body :config

@@ -4,7 +4,7 @@ module Arango
       class Get < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}"
+        self.uri_template = "/_api/collection/{name}"
 
         code 200, :success
         code 404, "collection or view not found"

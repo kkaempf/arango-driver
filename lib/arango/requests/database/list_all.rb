@@ -4,7 +4,7 @@ module Arango
       class ListAll < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/database'
+        self.uri_template = '{/dbcontext}/_api/database'
 
         code 200, :success
         code 400, "Request is invalid!"

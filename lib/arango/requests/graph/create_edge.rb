@@ -4,7 +4,7 @@ module Arango
       class CreateEdge < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{collection}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}'
 
         param :return_new
         param :wait_for_sync

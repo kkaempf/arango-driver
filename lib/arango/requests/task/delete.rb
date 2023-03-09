@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :delete
 
-        uri_template '/_api/tasks/{id}'
+        self.uri_template = '/_api/tasks/{id}'
 
         code 200, :success
         code 404, "Task not found"

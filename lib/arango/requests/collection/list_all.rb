@@ -4,7 +4,7 @@ module Arango
       class ListAll < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection"
+        self.uri_template = "/_api/collection"
 
         param :exclude_system
 

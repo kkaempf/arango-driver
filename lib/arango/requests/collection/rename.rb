@@ -4,7 +4,7 @@ module Arango
       class Rename < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/rename"
+        self.uri_template = "/_api/collection/{name}/rename"
 
         body :name, :required
 

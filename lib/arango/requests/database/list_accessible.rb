@@ -4,7 +4,7 @@ module Arango
       class ListAccessible < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/database/user'
+        self.uri_template = '{/dbcontext}/_api/database/user'
 
         code 200, :success
         code 400, "Request is invalid!"

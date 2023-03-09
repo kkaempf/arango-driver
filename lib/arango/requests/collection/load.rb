@@ -4,7 +4,7 @@ module Arango
       class Load < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/load"
+        self.uri_template = "/_api/collection/{name}/load"
 
         code 200, :success
         code 400, "Collection name missing!"

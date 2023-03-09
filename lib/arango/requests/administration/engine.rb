@@ -4,7 +4,7 @@ module Arango
       class Engine < Arango::Request
         request_method :get
 
-        uri_template "/_api/engine"
+        self.uri_template = "/_api/engine"
 
         code 200, :success
       end

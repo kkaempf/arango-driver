@@ -4,7 +4,7 @@ module Arango
       class Version < Arango::Request
         request_method :get
 
-        uri_template "/_admin/version"
+        self.uri_template = "/_admin/version"
 
         param :details
 

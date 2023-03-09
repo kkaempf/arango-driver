@@ -4,7 +4,7 @@ module Arango
       class LoadIndexesIntoMemory < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/loadIndexesIntoMemory"
+        self.uri_template = "/_api/collection/{name}/loadIndexesIntoMemory"
 
         code 200, :success
         code 400, "Collection name missing!"

@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template "/_api/collection"
+        self.uri_template = "/_api/collection"
 
         param :wait_for_sync_replication
         param :enforce_replication_factor

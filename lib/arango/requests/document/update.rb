@@ -4,7 +4,7 @@ module Arango
       class Update < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/document/{collection}/{key}'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}/{key}'
 
         header 'If-Match'
 

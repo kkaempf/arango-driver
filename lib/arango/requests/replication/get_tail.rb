@@ -4,7 +4,7 @@ module Arango
       class GetTail < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/wal/tail'
+        self.uri_template = '{/dbcontext}/_api/wal/tail'
 
         param :barrier_id
         param :chunk_size

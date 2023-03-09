@@ -4,7 +4,7 @@ module Arango
       class AddVertexCollections < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex'
 
         body :collection, :required
         

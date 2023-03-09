@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template '/_api/tasks'
+        self.uri_template = '/_api/tasks'
 
         body :name, :required
         body :command, :required

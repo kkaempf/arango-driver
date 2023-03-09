@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/database'
+        self.uri_template = '{/dbcontext}/_api/database'
 
         body :name, :required
         body :options

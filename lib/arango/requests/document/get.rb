@@ -4,7 +4,7 @@ module Arango
       class Get < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/document/{collection}/{key}'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}/{key}'
 
         header 'If-None-Match'
         header 'If-Match'

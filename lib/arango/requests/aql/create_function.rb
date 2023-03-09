@@ -4,7 +4,7 @@ module Arango
       class CreateFunction < Arango::Request
         request_method :post
 
-        uri_template "/_api/aqlfunction"
+        self.uri_template = "/_api/aqlfunction"
 
         param :group
 

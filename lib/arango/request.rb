@@ -104,7 +104,7 @@ module Arango
         end
       end
 
-      def request_method(name)
+      def request_method= name
         @request_method = name
       end
 
@@ -112,7 +112,7 @@ module Arango
         @request_method
       end
 
-      def uri_template(template)
+      def uri_template= template
         @uri_template = Addressable::Template.new(template)
       end
 

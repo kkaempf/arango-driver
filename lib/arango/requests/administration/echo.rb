@@ -4,7 +4,7 @@ module Arango
       class Echo < Arango::Request
         request_method :post
 
-        uri_template "/_admin/echo"
+        self.uri_template = "/_admin/echo"
 
         body_any
 

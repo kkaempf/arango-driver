@@ -4,7 +4,7 @@ module Arango
       class SetProperties < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/properties"
+        self.uri_template = "/_api/collection/{name}/properties"
 
         body :journal_size
         body :wait_for_sync

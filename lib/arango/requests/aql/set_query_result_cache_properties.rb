@@ -4,7 +4,7 @@ module Arango
       class SetQueryResultCacheProperties < Arango::Request
         request_method :put
 
-        uri_template "/_api/query-cache/properties"
+        self.uri_template = "/_api/query-cache/properties"
 
         body :include_system
         body :max_entry_size

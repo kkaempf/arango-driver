@@ -4,7 +4,7 @@ module Arango
       class ResponsibleShard < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/responsibleShard"
+        self.uri_template = "/_api/collection/{name}/responsibleShard"
 
         body_any
 

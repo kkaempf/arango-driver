@@ -4,7 +4,7 @@ module Arango
       class Execute < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/traversal'
+        self.uri_template = '{/dbcontext}/_api/traversal'
 
         body :direction
         body :edge_collection

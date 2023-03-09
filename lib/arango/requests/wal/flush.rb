@@ -4,7 +4,7 @@ module Arango
       class Flush < Arango::Request
         request_method :put
 
-        uri_template "/_admin/wal/flush"
+        self.uri_template = "/_admin/wal/flush"
 
         param :wait_for_collector
         param :wait_for_sync

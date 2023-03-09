@@ -4,7 +4,7 @@ module Arango
       class RunTests < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/foxx/tests'
+        self.uri_template = '{/dbcontext}/_api/foxx/tests'
 
         param :mount, :required
         param :filter

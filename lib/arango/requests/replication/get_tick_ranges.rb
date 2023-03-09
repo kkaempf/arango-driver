@@ -4,7 +4,7 @@ module Arango
       class GetTickRanges < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/wal/range'
+        self.uri_template = '{/dbcontext}/_api/wal/range'
 
         code 200, :success
         code 405, "Invalid HTTP request method!"

@@ -4,7 +4,7 @@ module Arango
       class SetCollectionAccessLevel < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
+        self.uri_template = '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
 
         body :grant
 

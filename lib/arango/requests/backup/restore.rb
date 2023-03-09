@@ -4,7 +4,7 @@ module Arango
       class Restore < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/restore"
+        self.uri_template = "/_admin/backup/restore"
 
         body :id, :required
 

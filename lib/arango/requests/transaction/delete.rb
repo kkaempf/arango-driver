@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/transaction/{id}'
+        self.uri_template = '{/dbcontext}/_api/transaction/{id}'
 
         code 200, :success
         code 400, "Transaction cannot be aborted!"

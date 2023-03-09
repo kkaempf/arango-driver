@@ -4,7 +4,7 @@ module Arango
       class ListRunning < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/transaction'
+        self.uri_template = '{/dbcontext}/_api/transaction'
 
         code 200, :success
       end

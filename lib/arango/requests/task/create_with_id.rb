@@ -4,7 +4,7 @@ module Arango
       class CreateWithId < Arango::Request
         request_method :put
 
-        uri_template '/_api/tasks/{id}'
+        self.uri_template = '/_api/tasks/{id}'
 
         body :name, :required
         body :command, :required

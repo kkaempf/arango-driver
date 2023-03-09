@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/delete"
+        self.uri_template = "/_admin/backup/delete"
 
         body :id, :required
 

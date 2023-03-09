@@ -4,7 +4,7 @@ module Arango
       class Status < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/transaction/{id}'
+        self.uri_template = '{/dbcontext}/_api/transaction/{id}'
 
         code 200, :success
         code 400, "Transaction identifier missing or malformed!"

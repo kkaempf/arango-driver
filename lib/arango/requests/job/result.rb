@@ -4,7 +4,7 @@ module Arango
       class Result < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/job/{id}'
+        self.uri_template = '{/dbcontext}/_api/job/{id}'
 
         code 204, :success
         code 400, "No job id given!"

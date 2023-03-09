@@ -4,7 +4,7 @@ module Arango
       class GetVertex < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}'
 
         header 'if-match'
         header 'if-none-match'

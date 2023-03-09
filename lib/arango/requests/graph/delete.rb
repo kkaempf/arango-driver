@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}'
 
         param :drop_collections
 

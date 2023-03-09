@@ -4,7 +4,7 @@ module Arango
       class ClearQueryResultCache < Arango::Request
         request_method :delete
 
-        uri_template "/_api/query-cache"
+        self.uri_template = "/_api/query-cache"
 
         param :namespace
 

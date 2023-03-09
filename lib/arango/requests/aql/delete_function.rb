@@ -4,7 +4,7 @@ module Arango
       class DeleteFunction < Arango::Request
         request_method :delete
 
-        uri_template "/_api/aqlfunction/{name}"
+        self.uri_template = "/_api/aqlfunction/{name}"
 
         param :namespace
 

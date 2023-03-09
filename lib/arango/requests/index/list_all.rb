@@ -4,7 +4,7 @@ module Arango
       class ListAll < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/index'
+        self.uri_template = '{/dbcontext}/_api/index'
 
         param :collection, :required
         

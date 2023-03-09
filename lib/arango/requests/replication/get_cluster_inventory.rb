@@ -4,7 +4,7 @@ module Arango
       class GetClusterInventory < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/clusterInventory'
+        self.uri_template = '{/dbcontext}/_api/replication/clusterInventory'
 
         param :include_system
 

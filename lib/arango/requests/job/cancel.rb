@@ -4,7 +4,7 @@ module Arango
       class Cancel < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/job/{id}/cancel'
+        self.uri_template = '{/dbcontext}/_api/job/{id}/cancel'
 
         code 200, :success
         code 400, "No type given or type invalid!"

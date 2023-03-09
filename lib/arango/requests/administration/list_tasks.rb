@@ -4,7 +4,7 @@ module Arango
       class ListTasks < Arango::Request
         request_method :get
 
-        uri_template "/_api/tasks/"
+        self.uri_template = "/_api/tasks/"
 
         code 200, :success
       end

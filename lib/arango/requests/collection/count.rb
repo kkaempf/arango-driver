@@ -4,7 +4,7 @@ module Arango
       class Count < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/count"
+        self.uri_template = "/_api/collection/{name}/count"
 
         code 200, :success
         code 400, "Collection name is missing!"

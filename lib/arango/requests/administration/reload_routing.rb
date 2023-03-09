@@ -4,7 +4,7 @@ module Arango
       class ReloadRouting < Arango::Request
         request_method :post
 
-        uri_template "/_admin/routing/reload"
+        self.uri_template = "/_admin/routing/reload"
 
         code 204, :success
       end

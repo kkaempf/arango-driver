@@ -4,7 +4,7 @@ module Arango
       class DisableDevelopmentMode < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/foxx/development'
+        self.uri_template = '{/dbcontext}/_api/foxx/development'
 
         param :mount, :required
 

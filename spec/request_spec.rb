@@ -37,7 +37,7 @@ describe Arango::Request do
 
   it 'can format the uri' do
     class EReq < Arango::Request
-      uri_template '{/db_context*}/_api/{is_system}'
+      self.uri_template = '{/db_context*}/_api/{is_system}'
     end
     r = EReq.new(server: OpenStruct.new(driver_instance: OpenStruct.new(base_uri: '/test')), args: { is_system: true })
     expect(r.formatted_uri).to eq('/test/_api/true')
@@ -110,10 +110,10 @@ describe Arango::Request do
         end
       end
       class EReq < Arango::Request
-        uri_template '{/db_context*}/_api/{is_system}'
+        self.uri_template = '{/db_context*}/_api/{is_system}'
       end
       class AllReq < Arango::Request
-        uri_template '{/db_context*}/_api/{is_system}'
+        self.uri_template = '{/db_context*}/_api/{is_system}'
         header 'If-Match'
         param :is_system
         body :is_system do

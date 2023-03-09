@@ -4,7 +4,7 @@ module Arango
       class GetLogLevel < Arango::Request
         request_method :get
 
-        uri_template "/_admin/log/level"
+        self.uri_template = "/_admin/log/level"
 
         code 200, :success
         code 500, "Server out of memory!"

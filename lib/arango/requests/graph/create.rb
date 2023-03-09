@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/gharial'
+        self.uri_template = '{/dbcontext}/_api/gharial'
 
         param :wait_for_sync
 

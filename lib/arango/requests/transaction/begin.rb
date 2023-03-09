@@ -4,7 +4,7 @@ module Arango
       class Begin < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/transaction/begin'
+        self.uri_template = '{/dbcontext}/_api/transaction/begin'
 
         body :allow_implicit
         body :collections

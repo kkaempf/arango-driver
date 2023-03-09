@@ -4,7 +4,7 @@ module Arango
       class RecalculateCount < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/recalculateCount"
+        self.uri_template = "/_api/collection/{name}/recalculateCount"
 
         code 200, :success
         code 404, "Collection is unknown!"

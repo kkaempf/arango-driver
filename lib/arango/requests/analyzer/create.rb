@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template "/_api/analyzer"
+        self.uri_template = "/_api/analyzer"
 
         body :features
         body :name

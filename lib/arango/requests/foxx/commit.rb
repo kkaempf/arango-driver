@@ -4,7 +4,7 @@ module Arango
       class Commit < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/foxx/commit'
+        self.uri_template = '{/dbcontext}/_api/foxx/commit'
 
         param :replace
 

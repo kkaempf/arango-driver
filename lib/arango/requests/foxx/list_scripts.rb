@@ -4,7 +4,7 @@ module Arango
       class ListScripts < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx/scripts'
+        self.uri_template = '{/dbcontext}/_api/foxx/scripts'
 
         param :mount
 

@@ -4,7 +4,7 @@ module Arango
       class Maintenance < Arango::Request
         request_method :put
 
-        uri_template "/_admin/cluster/maintenance"
+        self.uri_template = "/_admin/cluster/maintenance"
 
         # TODO
         # body_is_string

@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/document/{collection}'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}'
 
         param :overwrite
         param :return_old

@@ -4,7 +4,7 @@ module Arango
       class Read < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/edges/{id}'
+        self.uri_template = '{/dbcontext}/_api/edges/{id}'
 
         param :direction
         param :vertex

@@ -4,7 +4,7 @@ module Arango
       class Uninstall < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/foxx'
+        self.uri_template = '{/dbcontext}/_api/foxx'
 
         param :mount, :required
         param :teardown

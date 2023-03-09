@@ -4,7 +4,7 @@ module Arango
       class QueryResultCacheEntries < Arango::Request
         request_method :get
 
-        uri_template "/_api/query-cache/entries"
+        self.uri_template = "/_api/query-cache/entries"
 
         code 200, :success
         code 400, "Malformed request!"

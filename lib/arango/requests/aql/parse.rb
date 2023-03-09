@@ -4,7 +4,7 @@ module Arango
       class Parse < Arango::Request
         request_method :post
 
-        uri_template "/_api/query"
+        self.uri_template = "/_api/query"
 
         body :query, :required
 

@@ -4,7 +4,7 @@ module Arango
       class Readme < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx/readme'
+        self.uri_template = '{/dbcontext}/_api/foxx/readme'
 
         param :mount
 

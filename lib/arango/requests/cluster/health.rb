@@ -4,7 +4,7 @@ module Arango
       class Health < Arango::Request
         request_method :get
 
-        uri_template "/_admin/cluster/health"
+        self.uri_template = "/_admin/cluster/health"
 
         code 201, :success
       end

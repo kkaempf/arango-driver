@@ -4,7 +4,7 @@ module Arango
       class ReplaceDependencies < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/foxx/dependencies'
+        self.uri_template = '{/dbcontext}/_api/foxx/dependencies'
 
         param :mount, :required
 

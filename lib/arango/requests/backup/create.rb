@@ -4,7 +4,7 @@ module Arango
       class Create < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/create"
+        self.uri_template = "/_admin/backup/create"
 
         body :allow_inconsistent
         body :force

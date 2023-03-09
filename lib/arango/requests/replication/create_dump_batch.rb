@@ -4,7 +4,7 @@ module Arango
       class CreateDumpBatch < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/replication/batch'
+        self.uri_template = '{/dbcontext}/_api/replication/batch'
 
         body :ttl
 

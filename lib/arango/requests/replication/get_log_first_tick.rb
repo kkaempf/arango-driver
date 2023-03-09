@@ -4,7 +4,7 @@ module Arango
       class GetLogFirstTick < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/logger-first-tick'
+        self.uri_template = '{/dbcontext}/_api/replication/logger-first-tick'
 
         code 200, :success
         code 405, "Invalid HTTP request method!"

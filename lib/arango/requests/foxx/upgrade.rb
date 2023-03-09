@@ -4,7 +4,7 @@ module Arango
       class Upgrade < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/foxx/upgrade'
+        self.uri_template = '{/dbcontext}/_api/foxx/upgrade'
 
         param :mount, :required
         param :force

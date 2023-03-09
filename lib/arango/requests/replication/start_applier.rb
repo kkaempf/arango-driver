@@ -4,7 +4,7 @@ module Arango
       class StartApplier < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/replication/applier-start'
+        self.uri_template = '{/dbcontext}/_api/replication/applier-start'
 
         param :from
 

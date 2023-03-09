@@ -4,7 +4,7 @@ module Arango
       class ReplaceEdgeDefinition < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{definition}#definition'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{definition}#definition'
 
         param :drop_collections
         param :wait_for_sync

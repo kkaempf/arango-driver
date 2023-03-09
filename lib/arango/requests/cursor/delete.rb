@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :delete
 
-        uri_template "/_api/cursor/{id}"
+        self.uri_template = "/_api/cursor/{id}"
 
         code 202, :success
         code 404, "Unknown cursor!"

@@ -4,7 +4,7 @@ module Arango
       class CreateSearchView < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/view#arangosearch'
+        self.uri_template = '{/dbcontext}/_api/view#arangosearch'
 
         body :cleanup_interval_step
         body :commit_interval_msec

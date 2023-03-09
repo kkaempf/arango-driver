@@ -4,7 +4,7 @@ module Arango
       class NextBatch < Arango::Request
         request_method :put
 
-        uri_template "/_api/cursor/{id}"
+        self.uri_template = "/_api/cursor/{id}"
 
         code 200, :success
         code 202, :success

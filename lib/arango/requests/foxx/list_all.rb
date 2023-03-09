@@ -4,7 +4,7 @@ module Arango
       class ListAll < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx'
+        self.uri_template = '{/dbcontext}/_api/foxx'
 
         param :exclude_system
 

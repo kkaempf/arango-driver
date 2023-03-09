@@ -4,7 +4,7 @@ module Arango
       class ListEdgeDefinitions < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge'
 
         code 200, :success
         code 404, "Graph could not be found!"

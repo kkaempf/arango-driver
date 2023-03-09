@@ -4,7 +4,7 @@ module Arango
       class Shards < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/shards"
+        self.uri_template = "/_api/collection/{name}/shards"
 
         param :details
 

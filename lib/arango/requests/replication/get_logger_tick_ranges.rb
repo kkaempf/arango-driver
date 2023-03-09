@@ -4,7 +4,7 @@ module Arango
       class GetLoggerState < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/logger-state'
+        self.uri_template = '{/dbcontext}/_api/replication/logger-state'
 
         code 200, :success
         code 405, "Invalid HTTP request method!"

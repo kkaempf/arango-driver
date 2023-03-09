@@ -4,7 +4,7 @@ module Arango
       class GetDump < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/dump'
+        self.uri_template = '{/dbcontext}/_api/replication/dump'
 
         param :collection, :required
         param :batch_id, :required

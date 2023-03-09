@@ -4,7 +4,7 @@ module Arango
       class GetApplierState < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/applier-state'
+        self.uri_template = '{/dbcontext}/_api/replication/applier-state'
 
         code 200, :success
         code 405, "Invalid HTTP request method!"

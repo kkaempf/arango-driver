@@ -4,7 +4,7 @@ module Arango
       class RotateJournal < Arango::Request
         request_method :put
 
-        uri_template "/_api/collection/{name}/rotate"
+        self.uri_template = "/_api/collection/{name}/rotate"
 
         code 200, :success
         code 400, "Collection has no journal!"

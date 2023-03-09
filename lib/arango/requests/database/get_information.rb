@@ -4,7 +4,7 @@ module Arango
       class GetInformation < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/database/current'
+        self.uri_template = '{/dbcontext}/_api/database/current'
 
         code 200, :success
         code 400, "Request is invalid!"

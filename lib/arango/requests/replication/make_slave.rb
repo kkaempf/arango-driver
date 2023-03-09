@@ -4,7 +4,7 @@ module Arango
       class MakeSlave < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/replication/make-slave'
+        self.uri_template = '{/dbcontext}/_api/replication/make-slave'
 
         body :adaptive_polling
         body :auto_resync

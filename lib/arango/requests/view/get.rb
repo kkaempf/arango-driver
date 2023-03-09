@@ -4,7 +4,7 @@ module Arango
       class Get < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/view/{name}'
+        self.uri_template = '{/dbcontext}/_api/view/{name}'
 
         code 200, :success
         code 404, "View unknown!"

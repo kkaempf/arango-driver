@@ -4,7 +4,7 @@ module Arango
       class GetDependencies < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx/dependencies'
+        self.uri_template = '{/dbcontext}/_api/foxx/dependencies'
 
         param :mount, :required
 

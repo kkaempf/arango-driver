@@ -4,7 +4,7 @@ module Arango
       class SetMode < Arango::Request
         request_method :put
 
-        uri_template "/_admin/server/mode"
+        self.uri_template = "/_admin/server/mode"
 
         body :mode, :required
         

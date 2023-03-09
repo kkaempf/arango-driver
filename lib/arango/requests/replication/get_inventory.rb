@@ -4,7 +4,7 @@ module Arango
       class GetInventory < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/inventory'
+        self.uri_template = '{/dbcontext}/_api/replication/inventory'
 
         param :batch_id, :required
         param :global

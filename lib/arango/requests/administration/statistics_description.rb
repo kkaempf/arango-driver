@@ -4,7 +4,7 @@ module Arango
       class StatisticsDescription < Arango::Request
         request_method :get
 
-        uri_template "/_admin/statistics-description"
+        self.uri_template = "/_admin/statistics-description"
 
         code 200, :success
       end

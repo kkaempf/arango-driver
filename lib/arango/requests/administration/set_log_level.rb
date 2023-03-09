@@ -4,7 +4,7 @@ module Arango
       class SetLogLevel < Arango::Request
         request_method :put
 
-        uri_template "/_admin/log/level"
+        self.uri_template = "/_admin/log/level"
 
         body :agency
         body :agencycomm

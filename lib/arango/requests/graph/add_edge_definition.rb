@@ -4,7 +4,7 @@ module Arango
       class AddEdgeDefinition < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge'
 
         body :collection
         body :from

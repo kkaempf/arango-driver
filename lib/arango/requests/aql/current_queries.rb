@@ -4,7 +4,7 @@ module Arango
       class CurrentQueries < Arango::Request
         request_method :get
 
-        uri_template "/_api/query/current"
+        self.uri_template = "/_api/query/current"
 
         code 200, :success
         code 400, "Malformed request!"

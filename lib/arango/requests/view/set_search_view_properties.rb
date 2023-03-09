@@ -4,7 +4,7 @@ module Arango
       class SetSearchViewProperties < Arango::Request
         request_method :out
 
-        uri_template '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
+        self.uri_template = '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
 
         body :cleanup_interval_step
         body :commit_interval_msec

@@ -4,7 +4,7 @@ module Arango
       class Delete < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/database/{name}'
+        self.uri_template = '{/dbcontext}/_api/database/{name}'
 
         code 200, :success
         code 400, "Database already exists or request paramaters invalid!"

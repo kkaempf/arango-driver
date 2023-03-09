@@ -4,7 +4,7 @@ module Arango
       class Replace < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/user/{user}'
+        self.uri_template = '{/dbcontext}/_api/user/{user}'
 
         body :passwd
         body :active

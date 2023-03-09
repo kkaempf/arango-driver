@@ -4,7 +4,7 @@ module Arango
       class GetProperties < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/properties"
+        self.uri_template = "/_api/collection/{name}/properties"
 
         code 200, :success
         code 400, "Collection name missing!"

@@ -4,7 +4,7 @@ module Arango
       class SetQueryTrackingProperties < Arango::Request
         request_method :put
 
-        uri_template "/_api/query/properties"
+        self.uri_template = "/_api/query/properties"
 
         body :enabled
         body :max_query_string_length

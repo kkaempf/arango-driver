@@ -4,7 +4,7 @@ module Arango
       class Status < Arango::Request
         request_method :get
 
-        uri_template "/_admin/status"
+        self.uri_template = "/_admin/status"
 
         code 200, :success
       end

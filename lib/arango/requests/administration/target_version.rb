@@ -4,7 +4,7 @@ module Arango
       class TargetVersion < Arango::Request
         request_method :get
 
-        uri_template "/_admin/database/target-version"
+        self.uri_template = "/_admin/database/target-version"
 
         code 200, :success
       end

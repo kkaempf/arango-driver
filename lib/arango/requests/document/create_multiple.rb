@@ -4,7 +4,7 @@ module Arango
       class CreateMultiple < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/document/{collection}#multiple'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}#multiple'
 
         param :overwrite
         param :return_old

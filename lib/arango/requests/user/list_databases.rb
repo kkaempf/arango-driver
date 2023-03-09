@@ -4,7 +4,7 @@ module Arango
       class ListDatabases < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/user/{user}/database/'
+        self.uri_template = '{/dbcontext}/_api/user/{user}/database/'
 
         param :full
 

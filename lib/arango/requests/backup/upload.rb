@@ -4,7 +4,7 @@ module Arango
       class Upload < Arango::Request
         request_method :post
 
-        uri_template "/_admin/backup/upload"
+        self.uri_template = "/_admin/backup/upload"
 
         body :abort
         body :config

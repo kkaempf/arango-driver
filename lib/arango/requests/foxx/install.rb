@@ -4,7 +4,7 @@ module Arango
       class Install < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/foxx/service'
+        self.uri_template = '{/dbcontext}/_api/foxx/service'
 
         param :development
         param :legacy

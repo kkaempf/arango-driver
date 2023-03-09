@@ -4,7 +4,7 @@ module Arango
       class SetProperties < Arango::Request
         request_method :put
 
-        uri_template "/_admin/wal/properties"
+        self.uri_template = "/_admin/wal/properties"
 
         body :allow_oversize_entries
         body :historic_logfiles

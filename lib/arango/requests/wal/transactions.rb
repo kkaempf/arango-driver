@@ -4,7 +4,7 @@ module Arango
       class Transactions < Arango::Request
         request_method :get
 
-        uri_template "/_admin/wal/transactions"
+        self.uri_template = "/_admin/wal/transactions"
 
         code 200, :success
         code 405, "Invalid HTTP method!"

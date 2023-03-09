@@ -4,7 +4,7 @@ module Arango
       class DeleteMultiple < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/document/{collection}'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}'
 
         param :ignore_revs
         param :return_old

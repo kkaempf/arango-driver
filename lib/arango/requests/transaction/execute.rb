@@ -4,7 +4,7 @@ module Arango
       class Execute < Arango::Request
         request_method :post
 
-        uri_template '{/dbcontext}/_api/transaction'
+        self.uri_template = '{/dbcontext}/_api/transaction'
 
         body :action
         body :allow_implicit

@@ -4,7 +4,7 @@ module Arango
       class Log < Arango::Request
         request_method :get
 
-        uri_template "/_admin/log"
+        self.uri_template = "/_admin/log"
 
         param :level
         param :offset

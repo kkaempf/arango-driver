@@ -4,7 +4,7 @@ module Arango
       class GetLastTick < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/wal/lastTick'
+        self.uri_template = '{/dbcontext}/_api/wal/lastTick'
 
         code 200, :success
         code 405, "Invalid HTTP request method!"

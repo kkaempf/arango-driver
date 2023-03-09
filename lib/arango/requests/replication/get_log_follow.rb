@@ -4,7 +4,7 @@ module Arango
       class GetLogFollow < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/replication/logger-follow'
+        self.uri_template = '{/dbcontext}/_api/replication/logger-follow'
 
         param :chunk_size
         param :from

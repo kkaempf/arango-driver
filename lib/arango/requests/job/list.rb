@@ -4,7 +4,7 @@ module Arango
       class List < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/job/{type}#by-type'
+        self.uri_template = '{/dbcontext}/_api/job/{type}#by-type'
 
         param :count
 

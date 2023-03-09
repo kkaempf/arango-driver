@@ -4,7 +4,7 @@ module Arango
       class UpdateMultiple < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/document/{collection}'
+        self.uri_template = '{/dbcontext}/_api/document/{collection}'
 
         param :ignore_revs
         param :keep_null

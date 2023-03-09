@@ -4,7 +4,7 @@ module Arango
       class SetDatabaseAccessLevel < Arango::Request
         request_method :put
 
-        uri_template '{/dbcontext}/_api/user/{user}/database/{database}'
+        self.uri_template = '{/dbcontext}/_api/user/{user}/database/{database}'
 
         body :grant
 

@@ -4,7 +4,7 @@ module Arango
       class CreateVertex < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}'
 
         param :return_new
         param :wait_for_sync

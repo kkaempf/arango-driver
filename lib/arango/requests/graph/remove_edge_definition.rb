@@ -5,7 +5,7 @@ module Arango
         EdgeDefinition < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{definition}#definition'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{definition}#definition'
 
         body :collection
         body :from

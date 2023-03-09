@@ -4,7 +4,7 @@ module Arango
       class DeleteEdge < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}'
 
         header 'if-match'
 

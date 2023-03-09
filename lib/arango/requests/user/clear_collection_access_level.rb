@@ -4,7 +4,7 @@ module Arango
       class ClearCollectionAccessLevel < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
+        self.uri_template = '{/dbcontext}/_api/user/{user}/database/{database}/{collection}'
 
         code 202, :success
         code 400, "A error occurred!"

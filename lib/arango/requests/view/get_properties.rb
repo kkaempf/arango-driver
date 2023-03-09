@@ -4,7 +4,7 @@ module Arango
       class GetProperties < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/view/{name}/properties'
+        self.uri_template = '{/dbcontext}/_api/view/{name}/properties'
 
         code 200, :success
         code 400, "View name is missing!"

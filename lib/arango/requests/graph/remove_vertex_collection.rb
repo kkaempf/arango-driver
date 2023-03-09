@@ -4,7 +4,7 @@ module Arango
       class RemoveVertexCollections < Arango::Request
         request_method :delete
 
-        uri_template '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}'
+        self.uri_template = '{/dbcontext}/_api/gharial/{graph}/vertex/{collection}'
 
         param :drop_collection
 

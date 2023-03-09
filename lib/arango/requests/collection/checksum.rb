@@ -4,7 +4,7 @@ module Arango
       class Checksum < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/checksum"
+        self.uri_template = "/_api/collection/{name}/checksum"
 
         param :with_data
         param :with_revisions

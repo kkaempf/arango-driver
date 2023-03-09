@@ -4,7 +4,7 @@ module Arango
       class UpdateSearchViewProperties < Arango::Request
         request_method :patch
 
-        uri_template '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
+        self.uri_template = '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
 
         body :cleanup_interval_step
         body :commit_interval_msec

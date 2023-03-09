@@ -4,7 +4,7 @@ module Arango
       class Export < Arango::Request
         request_method :post
 
-        uri_template "/_api/export"
+        self.uri_template = "/_api/export"
 
         param :collection, :required
 

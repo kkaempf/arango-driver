@@ -4,7 +4,7 @@ module Arango
       class Swagger < Arango::Request
         request_method :get
 
-        uri_template '{/dbcontext}/_api/foxx/swagger'
+        self.uri_template = '{/dbcontext}/_api/foxx/swagger'
 
         param :mount, :required
 

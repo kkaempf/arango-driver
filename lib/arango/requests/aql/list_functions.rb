@@ -4,7 +4,7 @@ module Arango
       class ListFunctions < Arango::Request
         request_method :get
 
-        uri_template "/_api/aqlfunction"
+        self.uri_template = "/_api/aqlfunction"
 
         param :namespace
 

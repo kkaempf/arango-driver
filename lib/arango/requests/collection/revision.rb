@@ -4,7 +4,7 @@ module Arango
       class Revision < Arango::Request
         request_method :get
 
-        uri_template "/_api/collection/{name}/revision"
+        self.uri_template = "/_api/collection/{name}/revision"
 
         code 200, :success
         code 400, "Collection name missing!"

@@ -4,7 +4,7 @@ module Arango
       class Execute < Arango::Request
         request_method :post
 
-        uri_template "/_admin/execute"
+        self.uri_template = "/_admin/execute"
 
         # TODO
         # body_is_string
