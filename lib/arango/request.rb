@@ -1,3 +1,4 @@
+require "addressable/template"
 module Arango
   class Request
     class << self
@@ -112,10 +113,10 @@ module Arango
       end
 
       def uri_template(template)
-        @uri_template = URITemplate.new(template)
+        @uri_template = Addressable::Template.new(template)
       end
 
-      def uritemp
+      def uri_template
         @uri_template
       end
 
@@ -139,7 +140,7 @@ module Arango
       hash = {}
       hash['db_context'] = ['_db', database] if database
       hash.merge!(args.transform_keys(&:to_s)) if args
-      server.driver_instance.base_uri + self.class.uritemp.expand(hash)
+      server.driver_instance.base_uri + self.class.uri_template.expand(hash)
     end
 
     def initialize(body: nil, params: {}, headers: nil, args: nil, server:)

@@ -4,7 +4,6 @@ require "parser"
 require "unparser"
 require "method_source"
 require "escape_utils"
-require "uri_template"
 require "active_support/core_ext/string"
 
 opal_path = Gem::Specification.find_by_name('opal').full_gem_path
@@ -23,7 +22,8 @@ end
 require 'zeitwerk'
 require 'arango'
 
-loader = Zeitwerk::Loader.for_gem
+loader = Zeitwerk::Loader.for_gem(warn_on_extra_files: false)
+
 #loader.log!
 # override Zeitwerk's AQL -> Aql mapping
 loader.inflector.inflect(
