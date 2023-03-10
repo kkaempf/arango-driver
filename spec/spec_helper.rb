@@ -3,7 +3,7 @@ require "benchmark/ips"
 require "rspec"
 require "simplecov"
 SimpleCov.start rescue nil
-require "arango-driver"
+require "arangodb-driver"
 
 module Helpers
 	def connect

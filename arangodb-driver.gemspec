@@ -1,14 +1,14 @@
 require_relative 'lib/arango/version.rb'
 
 Gem::Specification.new do |s|
-  s.name        = 'arango-driver'
+  s.name        = 'arangodb-driver'
   s.version     = Arango::VERSION
   s.authors     = ['Stefano Martin', 'Jan Biedermann', 'Klaus Kämpf']
   s.email       = ['kkaempf@suse.de']
-  s.homepage    = 'https://github.com/kkaempf/arango-driver'
+  s.homepage    = 'https://github.com/kkaempf/arangodb-driver'
   s.license     = 'MIT'
   s.summary     = 'A simple ruby client for ArangoDB >= 3.10'
-  s.description = "Ruby driver for ArangoDB's HTTP API"
+  s.description = "Ruby driver for ArangoDB's HTTP API\narangodb-driver is a drop-in replacement for the (unmaintained) arango-driver"
   s.require_paths = ['lib']
   s.files         = `git ls-files -- {lib,LICENSE,README.md}`.split("\n") + %w[arango_opal.js]
   s.add_dependency 'activesupport', '~> 7.0'
