@@ -21,14 +21,12 @@ The history of arangodb-driver is long and twisted.
 It started with [ArangoRB](https://github.com/StefanoMartin/ArangoRB), converted to [arango-driver](https://github.com/janbiedermann/arango-driver)
 and converted again to [arangodb-driver](https://github.com/kkaempf/arangodb-driver).
 
-The main purpose of the last rename was to get it published at [rubygems.org](https://rubygems.org)
+The main purpose of the last rename was to get it published at [rubygems.org](https://rubygems.org/gems/arangodb-driver)
 
 ## Installation
 
-This doesnt work yet, gem not published yet:
 To install arangodb-driver: `gem install arangodb-driver` 
 To use it in your application: `require "arangodb-driver"`
-Please install from the repo instead.
 
 ## Community and Support
 
@@ -90,7 +88,7 @@ Password is a mandatory field.
 
 ### Returning results
 
-arangodb-driver try always to store the information obtained from ArangoDB in an instance.
+arangodb-driver tries always to store the information obtained from ArangoDB in an instance.
 If you need to receive the output, you can return it with:
 
 ``` ruby
