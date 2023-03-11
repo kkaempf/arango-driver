@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server Async
     module Async
       # === ASYNC ===
 

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Edge
   module Edge
+    # Arango Edge ClassMethods
     module ClassMethods
       #@!visibility private
       def self.extended(base)

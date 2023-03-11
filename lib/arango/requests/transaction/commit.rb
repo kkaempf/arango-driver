@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Transaction
       class Commit < Arango::Request
         self.request_method = :put

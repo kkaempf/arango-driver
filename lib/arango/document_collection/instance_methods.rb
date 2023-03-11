@@ -1,5 +1,7 @@
 module Arango
+  # Arango DocumentCollection
   module DocumentCollection
+    # Arango DocumentCollection InstanceMethods
     module InstanceMethods
 
       # Instantiate a new collection.

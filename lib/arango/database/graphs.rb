@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Graphs
     module Graphs
       def all_graphs
         Arango::Graph::Base.all(database: self)

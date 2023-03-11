@@ -1,5 +1,9 @@
 require "addressable/template"
 module Arango
+  #
+  # Arango Request
+  # Implements REST API to Arango
+  #
   class Request
     class << self
       def execute(**args)

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Replication
       class GetServerId < Arango::Request
         self.request_method = :get

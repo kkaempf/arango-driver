@@ -1,4 +1,8 @@
 module Arango
+  #
+  # Arango SearchView
+  # - not implemented -
+  #
   class SearchView
     def initialize
 

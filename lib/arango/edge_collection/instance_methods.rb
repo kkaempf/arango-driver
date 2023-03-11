@@ -1,5 +1,7 @@
 module Arango
+  # Arango EdgeCollection
   module EdgeCollection
+    # Arango EdgeCollection InstanceMethods
     module InstanceMethods
 
       # Instantiate a new collection.

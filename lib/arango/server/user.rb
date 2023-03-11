@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server User
     module User
       # Retrieves all users.
       # @return [Array<Arango::User>]

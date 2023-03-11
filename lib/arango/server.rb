@@ -1,6 +1,7 @@
-# === SERVER ===
-
 module Arango
+  #
+  # Arango Server
+  #
   class Server
     include Arango::Helper::Satisfaction
     include Arango::Server::Administration

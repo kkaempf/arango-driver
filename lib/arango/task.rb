@@ -1,6 +1,7 @@
-# === TASK ===
-
 module Arango
+  #
+  # Arango Task
+  #
   class Task
     include Arango::Helper::Satisfaction
     include Arango::Helper::DatabaseAssignment

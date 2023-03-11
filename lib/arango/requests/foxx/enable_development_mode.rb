@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Foxx
       class EnableDevelopmentMode < Arango::Request
         self.request_method = :enable

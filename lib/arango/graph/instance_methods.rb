@@ -1,5 +1,7 @@
 module Arango
+  # Arango Graph
   module Graph
+    # Arango Graph InstanceMethods
     module InstanceMethods
 
       # Instantiate a new collection.

@@ -1,6 +1,7 @@
-# === TRANSACTION ===
-
 module Arango
+  #
+  # Arango Transaction
+  #
   class Transaction
     include Arango::Helper::Satisfaction
 

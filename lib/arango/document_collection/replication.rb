@@ -1,5 +1,7 @@
 module Arango
+  # Arango DocumentCollection
   module DocumentCollection
+    # Arango DocumentCollection Replication
     module Replication
       # === REPLICATION ===
 

@@ -1,17 +1,18 @@
-# === AQL ===
-
 module Arango
+  #
+  # Arango Query Language
+  #
   class AQL
     include Arango::Helper::Satisfaction
 
     class << self
 
-      # id: the query’s id
+      # id: the query's id
       # query: the query string (potentially truncated)
       # bindVars: the bind parameter values used by the query
       # started: the date and time when the query was started
-      # runTime: the query’s run time up to the point the list of queries was queried
-      # state: the query’s current execution state (as a string)
+      # runTime: the query's run time up to the point the list of queries was queried
+      # state: the query's current execution state (as a string)
       # stream: whether or not the query uses a streaming cursor
       def from_result_hash(query_hash)
         new_query_hash = query_hash.transform_keys { |k| k.to_s.underscore.to_sym }

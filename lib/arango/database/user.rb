@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database User
     module User
       def check_user(user)
         user = Arango::User.new(user: user) if user.is_a?(String)

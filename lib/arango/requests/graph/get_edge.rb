@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Graph
       class GetEdge < Arango::Request
         self.request_method = :get

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module AQL
       class CreateFunction < Arango::Request
         self.request_method = :post

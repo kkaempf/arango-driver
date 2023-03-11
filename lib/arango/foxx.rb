@@ -1,6 +1,7 @@
-# === FOXX ===
-
 module Arango
+  #
+  # Arango Foxx
+  #
   class Foxx
     include Arango::Helper::Satisfaction
 

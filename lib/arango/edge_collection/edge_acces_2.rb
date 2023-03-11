@@ -1,5 +1,7 @@
 module Arango
+  # Arango EdgeCollection
   module Collection
+    # Arango EdgeCollection EdgeAccess
     module EdgeAccess
       # === GRAPH ===
       def graph=(graph)

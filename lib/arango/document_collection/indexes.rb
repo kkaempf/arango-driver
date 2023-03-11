@@ -1,5 +1,7 @@
 module Arango
+  # Arango DocumentCollection
   module DocumentCollection
+    # Arango DocumentCollection Indexes
     module Indexes
       # === INDEXES ===
       def create_index(type: "hash", fields:, unique: nil, sparse: nil,

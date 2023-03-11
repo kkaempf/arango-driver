@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server Agency
     module Agency
       def agency_config
         request("GET", "_api/agency/config")

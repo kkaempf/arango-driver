@@ -1,5 +1,8 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database FoxxServices
+    # - not implemented -
     module FoxxServices
       # === FOXX ===
       def install_service

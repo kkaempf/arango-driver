@@ -1,5 +1,7 @@
 module Arango
+  # Arango EdgeCollection
   module EdgeCollection
+    # Arango EdgeCollection ClassMethods
     module ClassMethods
       def new(database: Arango.current_database, graph: nil,
               name:, id: nil, globally_unique_id: nil, is_system: false, status: nil, type: :edge,

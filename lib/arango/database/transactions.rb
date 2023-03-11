@@ -1,5 +1,8 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Transactions
+    # - not implemented -
     module Transactions
       # === TRANSACTION ===
 

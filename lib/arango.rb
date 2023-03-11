@@ -1,31 +1,59 @@
+#
+# Arango toplevel module
+#
+
 module Arango
   class << self
+    # get current backend driver
     def driver
       @driver_class
     end
 
+    # set backend driver
     def driver=(dc)
       @driver_class = dc
     end
 
+    # get current server
     def current_server
       @current_server
     end
 
+    # get current server's database
     def current_database
       @current_server.current_database
     end
 
+    # set current server
     def current_server=(s)
       @current_server = s
     end
 
+    # connect to database of current server
+    # sets current_database
+    # @param username [String] defaults to 'root'
+    # @param password [String]
+    # @param host [String] defaults to 'localhost'
+    # @param port [String] defaults to '8529'
+    # @param tls [Boolean] 'true' for a secure (https) connection, default to false
+    # @param database [String] name of database to connect to
+    # @param driver_options [Hash] driver specific options, defaults to nil
+    # @return [Arango::Database]
     def connect_to_database(username: "root", password:, host: "localhost", port: "8529", tls: false, database:, driver_options: nil)
       server = connect_to_server(username: username, password: password, host: host, port: port, tls: false, driver_options: driver_options)
       database = server.get_database(database)
       server.current_database = database
     end
 
+    # connect to server
+    # sets current_server (if not set !)
+    # @param username [String] defaults to 'root'
+    # @param password [String]
+    # @param host [String] defaults to 'localhost'
+    # @param port [String] defaults to '8529'
+    # @param tls [Boolean] 'true' for a secure (https) connection, default to false
+    # @param driver_options [Hash] driver specific options, defaults to nil
+    # @return [Arango::Server]
     def connect_to_server(username: "root", password:, host: "localhost", port: "8529", tls: false, driver_options: nil)
       server = Arango::Server.new(username: username, password: password, host: host, port: port, tls: tls, driver_options: driver_options)
       @current_server = server unless @current_server

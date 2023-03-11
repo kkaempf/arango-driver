@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database AQLQueries
     module AQLQueries
       def new_aql(query:, batch_size: nil, bind_vars: nil, cache: nil, count: nil, fail_on_warning: nil, full_count: nil,
                   intermediate_commit_count: nil, intermediate_commit_size: nil, max_plans: nil, max_transaction_size: nil,

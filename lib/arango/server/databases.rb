@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server Databases
     module Databases
       # Retrieves all databases.
       # @return [Array<Arango::Database>]

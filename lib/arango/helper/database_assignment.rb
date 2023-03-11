@@ -1,5 +1,7 @@
 module Arango
+  # Arango Helper
   module Helper
+    # Arango Helper DatabaseAssignment
     module DatabaseAssignment
 
       protected

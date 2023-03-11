@@ -1,5 +1,7 @@
 module Arango
+  # Arango Edge
   module Edge
+    # Arango Edge InstanceMethods
     module InstanceMethods
 
       def initialize(key: nil, attributes: {}, from: nil, to: nil, edge_collection:, ignore_revs: false, wait_for_sync: false)

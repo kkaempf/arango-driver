@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module User
       class GetDatabaseAccessLevel < Arango::Request
         self.request_method = :get

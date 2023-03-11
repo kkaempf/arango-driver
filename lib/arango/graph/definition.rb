@@ -1,5 +1,7 @@
 module Arango
+  # Arango Graph
   module Graph
+    # Arango Graph EdgeAccess
     module EdgeAccess
       def edge_collection
 

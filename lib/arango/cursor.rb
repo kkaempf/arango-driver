@@ -1,4 +1,9 @@
+
 module Arango
+  #
+  # Arango Cursor
+  # - not implemented -
+  #
   class Cursor
     def has_next?
 

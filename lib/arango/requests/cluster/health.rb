@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Cluster
       class Health < Arango::Request
         self.request_method = :get

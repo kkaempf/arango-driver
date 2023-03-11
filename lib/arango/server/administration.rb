@@ -1,5 +1,9 @@
 module Arango
+  #
+  # Arango Server
+  #
   class Server
+    # Arango Server Administration
     module Administration
       # Check availability of the server.
       # @return [Boolean]

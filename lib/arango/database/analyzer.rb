@@ -1,5 +1,8 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Analyzer
+    # - not implemented -
     module Analyzer
       def create_analyzer
         # TODO

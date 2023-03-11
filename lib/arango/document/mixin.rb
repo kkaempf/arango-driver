@@ -1,5 +1,7 @@
 module Arango
+  # Arango Document
   module Document
+    # Arango Document Mixin
     module Mixin
       #@!visibility private
       def self.included(base)

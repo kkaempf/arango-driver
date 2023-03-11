@@ -1,8 +1,10 @@
 module Arango
+  # Arango DocumentCollection
   module DocumentCollection
     STATES = %i[unknown new_born unloaded loaded being_unloaded deleted loading] # do not sort, index is used
     TYPES = %i[unknown unknown document edge] # do not sort, index is used
 
+    # Arango DocumentCollection Mixin
     module Mixin
       #@!visibility private
       def self.included(base)

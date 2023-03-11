@@ -1,6 +1,7 @@
-# === REPLICATION ===
-
 module Arango
+  #
+  # Arango Replication
+  #
   class Replication
     include Arango::Helper::Satisfaction
 

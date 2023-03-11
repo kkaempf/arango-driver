@@ -1,6 +1,8 @@
-# === ERROR ===
 
 module Arango
+  #
+  # Arango Error
+  #
   class Error < StandardError
     ARANGODB_ERRORS = {
       no_other_aql_next: {

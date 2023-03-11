@@ -12,3 +12,7 @@ task :print_coverage do
   data = Oj.load(File.read('coverage/.last_run.json'), mode: :strict)
   puts "Coverage: #{data['result']['covered_percent']}%"
 end
+
+task :doc do
+  system('yard')
+end

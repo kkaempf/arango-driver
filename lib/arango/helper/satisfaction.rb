@@ -1,5 +1,7 @@
 module Arango
+  # Arango Helper
   module Helper
+    # Arango Helper Satisfaction
     module Satisfaction
       def satisfy_class?(object, *classes)
         return true if classes.include?(object.class)

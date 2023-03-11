@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Document
       class CreateMultiple < Arango::Request
         self.request_method = :post

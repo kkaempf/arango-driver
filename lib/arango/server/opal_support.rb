@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server OpalSupport
     module OpalSupport
       # From the Arango 2.8 documentation:
       #

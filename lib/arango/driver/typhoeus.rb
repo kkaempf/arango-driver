@@ -1,5 +1,7 @@
 module Arango
+  # Arango Driver
   module Driver
+    # Arango Driver Typhoeus
     class Typhoeus
       def initialize(base_uri:, options:)
         @base_uri = base_uri

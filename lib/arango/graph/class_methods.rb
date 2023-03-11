@@ -1,5 +1,7 @@
 module Arango
+  # Arango Graph
   module Graph
+    # Arango Graph ClassMethods
     module ClassMethods
       def from_h(graph_hash, database: Arango.current_database)
         graph_hash = graph_hash.transform_keys { |k| k.to_s.underscore.to_sym }

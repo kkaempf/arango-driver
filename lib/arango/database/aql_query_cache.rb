@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database AQLQueryCache
     module AQLQueryCache
 
       def clear_query_cache

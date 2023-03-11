@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module AQL
       class GetSlowQueryList < Arango::Request
         self.request_method = :get

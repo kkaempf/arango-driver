@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Database
       class GetInformation < Arango::Request
         self.request_method = :get

@@ -1,6 +1,7 @@
-# ==== DOCUMENT ====
-
 module Arango
+  #
+  # Arango View
+  #
   class View
     include Arango::Helper::Satisfaction
 

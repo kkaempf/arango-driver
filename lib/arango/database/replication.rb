@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Replication
     module Replication
       # === REPLICATION ===
 

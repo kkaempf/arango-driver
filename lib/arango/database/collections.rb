@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Collections
     module Collections
       # Retrieves all collections from the database.
       # @param exclude_system [Boolean] Optional, default true, exclude system collections.

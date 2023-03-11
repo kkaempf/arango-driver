@@ -1,6 +1,7 @@
-  # === INDEXES ===
-
 module Arango
+  #
+  # Arango Index
+  #
   class Index
     include Arango::Helper::Satisfaction
     include Arango::Helper::DatabaseAssignment

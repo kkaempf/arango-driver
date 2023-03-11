@@ -1,5 +1,7 @@
 module Arango
+  # Arango Document
   module Document
+    # Arango Document ClassMethods
     module ClassMethods
       #@!visibility private
       def self.extended(base)

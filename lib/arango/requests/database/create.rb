@@ -1,5 +1,7 @@
 module Arango
+  # Arango Requests
   module Requests
+  # Arango Requests
     module Database
       class Create < Arango::Request
         self.request_method = :post

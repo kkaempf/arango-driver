@@ -1,4 +1,8 @@
 module Arango
+  #
+  # Arango Result
+  # implements result representation from Arango::Request
+  #
   class Result
     def initialize(result)
       @result = result ? result : {}

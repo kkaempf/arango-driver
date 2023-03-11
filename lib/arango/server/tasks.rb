@@ -1,5 +1,7 @@
 module Arango
+  # Arango Server
   class Server
+    # Arango Server Tasks
     module Tasks
 
       # Get all tasks.

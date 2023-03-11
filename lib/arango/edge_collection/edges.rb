@@ -1,5 +1,7 @@
 module Arango
+  # Arango EdgeCollection
   module EdgeCollection
+    # Arango EdgeCollection Edges
     module Edges
       def new_edge(key: nil, attributes: {}, from: nil, to: nil, wait_for_sync: nil)
         Arango::Edge::Base.new(key: key, attributes: attributes, from: from, to: to, edge_collection: self, wait_for_sync: wait_for_sync)

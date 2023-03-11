@@ -1,5 +1,11 @@
 module Arango
+  #
+  # Arango View
+  #
   module View
+    #
+    # Arango View Basics
+    #
     module Basics
       def exists?
 

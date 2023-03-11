@@ -1,4 +1,7 @@
 module Arango
+  #
+  # Arango User
+  #
   class User
     include Arango::Helper::Satisfaction
 

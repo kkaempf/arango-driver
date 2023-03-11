@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database AQLFunctions
     module AQLFunctions
 
       def list_aql_functions(namespace: nil)

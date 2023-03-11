@@ -1,5 +1,7 @@
 module Arango
+  # Arango Graph
   module Graph
+    # Arango Graph Mixin
     module Mixin
       #@!visibility private
       def self.included(base)

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database Tasks
     module Tasks
       # Get all tasks.
       # @return [Array<Arango::Task>]

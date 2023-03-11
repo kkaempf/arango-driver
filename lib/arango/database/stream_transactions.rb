@@ -1,5 +1,8 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database StreamTransactions
+    # - not implemented -
     module StreamTransactions
       def begin_stream_transaction
 

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Edge
   module Edge
+    # Arango Edge Mixin
     module Mixin
       #@!visibility private
       def self.included(base)

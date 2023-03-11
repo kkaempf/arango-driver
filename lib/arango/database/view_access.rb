@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database ViewAccess
     module ViewAccess
       def create_search_view
         # TODO

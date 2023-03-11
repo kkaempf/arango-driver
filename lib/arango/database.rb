@@ -1,6 +1,7 @@
-# === DATABASE ===
-
 module Arango
+  #
+  # Arango Database
+  #
   class Database
     include Arango::Helper::Satisfaction
 

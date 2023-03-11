@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database EdgeCollections
     module EdgeCollections
       # Retrieves all edge collections from the database.
       # @param exclude_system [Boolean] Optional, default true, exclude system collections.

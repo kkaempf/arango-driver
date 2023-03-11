@@ -438,11 +438,11 @@ It means that we skip the first three Documents, we can retrieve the next 100 Do
 To retrieve specific Document you can use:
 
 ``` ruby
-myCollection.documentsMatch match: {value:  4}   # All Documents of the Collection with value equal to 4
-myCollection.documentMatch match: {value:  4}    # The first Document of the Collection with value equal to 4
-myCollection.documentByKeys keys: ["4546", "4646"] # Documents of the Collection with the keys in the Array
+myCollection.documentsMatch match: {value: 4}       # All Documents of the Collection with value equal to 4
+myCollection.documentMatch match: {value: 4}        # The first Document of the Collection with value equal to 4
+myCollection.documentByKeys keys: ["4546", "4646"]  # Documents of the Collection with the keys in the Array
 myCollection.documentByName names: ["4546", "4646"] # Documents of the Collection with the name in the Array
-myCollection.random # A random Document of the Collection
+myCollection.random                                 # A random Document of the Collection
 ```
 
 #### Modifying multiple documents
@@ -474,7 +474,7 @@ One-to-more with one Edge class (and More-to-one with one Edge class)
  * [myDocA] --(myEdge)--> [myDocB]
  * [myDocA] --(myEdge)--> [myDocC]
 
- ``` ruby
+``` ruby
 myEdgeCollection.createEdges document: myEdge, from: myDocA, to: [myDocB, myDocC]
 ```
 
@@ -485,7 +485,7 @@ More-to-More with one Edge class
  * [myDocA] --(myEdge)--> [myDocD]
  * [myDocB] --(myEdge)--> [myDocD]
 
- ``` ruby
+``` ruby
 myEdgeCollection.createEdges document: myEdge, from: [myDocA, myDocB], to: [myDocC, myDocD]
 ```
 

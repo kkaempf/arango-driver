@@ -1,4 +1,5 @@
 module Arango
+  # Arango Requests
   module Requests
     module Job
       class Cancel < Arango::Request

@@ -1,5 +1,7 @@
 module Arango
+  # Arango Document
   module Document
+    # Arango Document InstanceMethods
     module InstanceMethods
 
       attr_accessor :ignore_revs, :wait_for_sync

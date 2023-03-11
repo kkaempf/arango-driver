@@ -1,5 +1,7 @@
 module Arango
+  # Arango DocumentCollection
   module DocumentCollection
+    # Arango DocumentCollection User
     module User
       # === USER ACCESS ===
 

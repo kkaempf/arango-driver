@@ -1,5 +1,7 @@
 module Arango
+  # Arango Database
   class Database
+    # Arango Database DocumentCollections
     module DocumentCollections
       # Retrieves all document collections from the database.
       # @param exclude_system [Boolean] Optional, default true, exclude system collections.
@@ -13,9 +15,9 @@ module Arango
 
       # Creates a new document collection.
       # @param name [String] The name of the collection.
-      # @param type [Symbol] One of :document or :edge, the collection type, optional, default: :document.
+      # @param is_system [Boolean] set true to create a system collection, defaults to false
       # @return [Arango::DocumentCollection::Base] The instance of the collection created.
-      def create_document_collection(name:, is_system: false)
+      def create_document_collection(name:, type: :document, is_system: false)
         Arango::DocumentCollection::Base.new(name: name, database: self, is_system: is_system).create
       end
       def batch_create_document_collection(name:, is_system: false)
