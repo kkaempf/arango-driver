@@ -23,7 +23,6 @@ module Arango
       def self.extended(base)
 
         # Retrieves all graphs from the database.
-        # @param exclude_system [Boolean] Optional, default true, exclude system graphs.
         # @param database [Arango::Database]
         # @return [Array<Arango::Graph::Base>]
         def all (database: Arango.current_database)
@@ -42,7 +41,6 @@ module Arango
         end
 
         # Retrieves a list of all graphs.
-        # @param exclude_system [Boolean] Optional, default true, exclude system graphs.
         # @param database [Arango::Database]
         # @return [Array<String>] List of graph names.
         def list (database: Arango.current_database)
