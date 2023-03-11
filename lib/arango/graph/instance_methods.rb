@@ -3,10 +3,12 @@ module Arango
     module InstanceMethods
 
       # Instantiate a new collection.
-      # For param description see the attributes descriptions. All params except name and database are optional.
+      # For param description see the attributes descriptions. All params except name are optional.
       # @param name [String] The name of the collection.
-      # @param database [Arango::Database]
-      # @param status
+      # @param database [Arango::Database], defaults to Arango.current_database
+      # @param edge_definitions [Array] of edge definitions
+      # @param is_smart [Boolean], optional, defaults to false
+      # @param properties [Hash]
       # @return [Arango::Graph]
       def initialize(database: Arango.current_database,
                      name:, edge_definitions: [], is_smart: false,
