@@ -1,3 +1,0 @@
-source "https://rubygems.org"
-gem 'opal', github: 'janbiedermann/opal', branch: 'es6_modules_1_1'
-gem 'opal-webpack-loader', '>= 0.9.11'
