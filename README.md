@@ -2,7 +2,7 @@
   arangodb-driver
   <br/>
   <br/>
-  <img src="https://raw.githubusercontent.com/isomorfeus/arango-driver/master/docs/arango-driver.png" align="center"/>
+  <img src="https://raw.githubusercontent.com/kkaempf/arangodb-driver/master/docs/arangodb-driver.png" align="center"/>
 </h1>
 
 arangodb-driver is a drop-in replacement for the (archived) [arango-driver](https://github.com/janbiedermann/arango-driver).
