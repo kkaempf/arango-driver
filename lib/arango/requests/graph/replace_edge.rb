@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: PUT {/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}
       class ReplaceEdge < Arango::Request
         self.request_method = :put
 

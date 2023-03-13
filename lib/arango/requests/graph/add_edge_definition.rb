@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: POST {/dbcontext}/_api/gharial/{graph}/edge
       class AddEdgeDefinition < Arango::Request
         self.request_method = :post
 

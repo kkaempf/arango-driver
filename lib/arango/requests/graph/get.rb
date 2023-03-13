@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Graph Requests
     module Graph
+      # API: GET {/dbcontext}/_api/gharial/{graph}
       class Get < Arango::Request
         self.request_method = :get
 

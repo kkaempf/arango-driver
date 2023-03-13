@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: POST {/dbcontext}/_api/gharial/{graph}/vertex
       class AddVertexCollections < Arango::Request
         self.request_method = :post
 

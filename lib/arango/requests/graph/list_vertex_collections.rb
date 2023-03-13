@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: GET {/dbcontext}/_api/gharial/{graph}/vertex
       class ListVertexCollections < Arango::Request
         self.request_method = :get
 

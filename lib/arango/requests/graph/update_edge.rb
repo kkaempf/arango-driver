@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: PATCH {/dbcontext}/_api/gharial/{graph}/edge/{collection}/{edge}
       class UpdateEdge < Arango::Request
         self.request_method = :patch
 

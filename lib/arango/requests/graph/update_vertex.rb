@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: PATCH {/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}
       class UpdateVertex < Arango::Request
         self.request_method = :patch
 

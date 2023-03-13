@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Graph Requests
     module Graph
+      # API: POST {/dbcontext}/_api/gharial
       class Create < Arango::Request
         self.request_method = :post
 

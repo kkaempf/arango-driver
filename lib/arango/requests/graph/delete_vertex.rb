@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Graph Requests
     module Graph
+      # API: DELETE {/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}
       class DeleteVertex < Arango::Request
         self.request_method = :delete
 

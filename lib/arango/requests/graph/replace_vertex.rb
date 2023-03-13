@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Graph Requests
     module Graph
+      # API: PUT {/dbcontext}/_api/gharial/{graph}/vertex/{collection}/{vertex}
       class ReplaceVertex < Arango::Request
         self.request_method = :put
 
