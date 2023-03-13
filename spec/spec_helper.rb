@@ -2,7 +2,7 @@ require "ostruct"
 require "benchmark/ips"
 require "rspec"
 require "simplecov"
-SimpleCov.start rescue nil
+SimpleCov.start # rescue nil
 require "arangodb-driver"
 
 module Helpers
