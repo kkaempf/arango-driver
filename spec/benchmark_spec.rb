@@ -3,6 +3,9 @@ require 'benchmark'
 
 NUMBER_OF_RUNS = 5000
 
+if ENV["ARANGODB_BENCHMARK"].nil?
+  STDERR.puts "benchmark_spec disabled, set ARANGODB_BENCHMARK to enable"
+else
 describe Arango::Server do
   context "benchmark http" do
     before :all do
@@ -170,3 +173,4 @@ describe Arango::Server do
 #    end
   end
 end
+end # if ARANGODB_BENCHMARK

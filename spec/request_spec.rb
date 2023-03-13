@@ -92,6 +92,9 @@ describe Arango::Request do
     expect { IReq.new(server: Object.new) }.to raise_error Arango::Error
   end
 
+  if ENV["ARANGODB_BENCHMARK"].nil?
+    STDERR.puts "Request Benchmark disabled, set ARANGODB_BENCHMARK to enable"
+  else
   it 'benchmarking' do
     puts
     Benchmark.ips do |x|
@@ -135,4 +138,5 @@ describe Arango::Request do
       end
     end
   end
+  end # if ARANGODB_BENCHMARK
 end

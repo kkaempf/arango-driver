@@ -27,13 +27,16 @@ describe "Arango::Server" do
       expect(Oj.load(result.request_body, mode: :strict)).to eq('test' => 'result')
     end
 
+   if ENV["ARANGODB_BENCHMARK"].nil?
+     STDERR.puts "Server benchmark disabled, set ARANGODB_BENCHMARK to enable"
+   else
     it 'benchmarking' do
       puts
       Benchmark.ips do |x|
         x.report("echo requests") { @server.echo(test: 'result') }
       end
     end
-
+  end
     it "engine" do
       expect(%w[mmfiles rocksdb]).to include(@server.engine.name)
     end
