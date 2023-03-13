@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Collection Requests
     module Collection
+      # API: PUT /_api/collection/{name}/properties
       class SetProperties < Arango::Request
         self.request_method = :put
 

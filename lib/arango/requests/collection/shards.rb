@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Collection Requests
     module Collection
+      # API: GET /_api/collection/{name}/shards
       class Shards < Arango::Request
         self.request_method = :get
 

@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Collection Requests
     module Collection
+      # API: PUT /_api/collection/{name}/truncate
       class Truncate < Arango::Request
         self.request_method = :put
 

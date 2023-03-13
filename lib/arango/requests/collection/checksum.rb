@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Collection Requests
     module Collection
+      # API: GET /_api/collection/{name}/checksum
       class Checksum < Arango::Request
         self.request_method = :get
 
