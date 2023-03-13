@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # AQL Requests
     module AQL
+      # API: DELETE /_api/query-cache
       class ClearQueryResultCache < Arango::Request
         self.request_method = :delete
 

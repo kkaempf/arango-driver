@@ -3,7 +3,9 @@ module Arango
   module Collection
     # Arango EdgeCollection EdgeAccess
     module EdgeAccess
-      # === GRAPH ===
+      #
+      # Set the graph of the EdgeAccess instance
+      #
       def graph=(graph)
         satisfy_module_or_nil?(graph, Arango::Graph::Mixin)
         if !graph.nil? && graph.database.name != @database.name
@@ -14,37 +16,41 @@ module Arango
       end
       alias assign_graph graph=
 
+      #
+      # Add a vertex to the graph
+      # If no graph is defined, create a Document
+      #
+      # @return: Vertex or Document
+      #
       def vertex(name: nil, body: {}, rev: nil, from: nil, to: nil)
         if @type == :edge
           raise Arango::Error.new err: :is_a_edge_collection, data: {type:  @type}
         end
         if @graph.nil?
-          Arango::Document::Base.new(name: name, body: body, rev: rev, collection: self)
+          Arango::Document::Base.new(name: name, body: body, rev: rev, collection: self, from: from, to: to)
         else
-          Arango::Vertex.new(name: name, body: body, rev: rev, collection: self)
+          Arango::Vertex.new(name: name, body: body, rev: rev, collection: self, from: from, to: to)
         end
       end
 
+      #
+      # Add an edge to the graph
+      # If no graph is defined, create a Document
+      #
+      # @return: Vertex or Document
+      #
       def edge(name: nil, body: {}, rev: nil, from: nil, to: nil)
         if @type == :document
           raise Arango::Error.new err: :is_a_document_collection, data: {type:  @type}
         end
         if @graph.nil?
-          Arango::Document::Base.new(name: name, body: body, rev: rev, collection: self)
+          Arango::Document::Base.new(name: name, body: body, rev: rev, from: from, to: to, collection: self)
         else
           Arango::Edge::Base.new(name: name, body: body, rev: rev, from: from, to: to,
                            collection: self)
         end
       end
 
-      def edge_exists?
-
-      end
-
-      def edge(name: nil, body: {}, rev: nil, from: nil, to: nil)
-        Arango::Document::Base.new(name: name, collection: self, body: body, rev: rev,
-                             from: from, to: to)
-      end
 
       def edges(type: "edge") # "path", "id", "key"
         @return_edge = false
@@ -63,14 +69,6 @@ module Arango
         if @return_edge
           result[:result].map{|key| Arango::Document::Base.new(name: key, collection: self)}
         end
-      end
-
-      def insert_edge
-
-      end
-
-      def insert_edges
-
       end
 
       def replace_edge

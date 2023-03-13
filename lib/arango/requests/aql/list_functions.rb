@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # AQL Requests
     module AQL
+      # API: GET /_api/aqlfunction
       class ListFunctions < Arango::Request
         self.request_method = :get
 

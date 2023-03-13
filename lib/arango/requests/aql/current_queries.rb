@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # AQL Requests
     module AQL
+      # API: GET /_api/query/current
       class CurrentQueries < Arango::Request
         self.request_method = :get
 

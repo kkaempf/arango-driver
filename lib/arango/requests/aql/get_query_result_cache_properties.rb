@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # AQL Requests
     module AQL
+      # API: GET /_api/query-cache/properties
       class GetQueryResultCacheProperties < Arango::Request
         self.request_method = :get
 

@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # AQL Requests
     module AQL
+      # API: PUT /_api/query/properties
       class SetQueryTrackingProperties < Arango::Request
         self.request_method = :put
 

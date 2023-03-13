@@ -1,8 +1,10 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # AQL Requests
     module AQL
+      # API: DELETE /_api/aqlfunction/{name}
+      # @param name [String]
       class DeleteFunction < Arango::Request
         self.request_method = :delete
 

@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # AQL Requests
     module AQL
+      # API: POST /_api/explain
       class Explain < Arango::Request
         self.request_method = :post
 
