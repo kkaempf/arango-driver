@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Administration Requests
     module Administration
+      # API: GET /_admin/status
       class Status < Arango::Request
         self.request_method = :get
 

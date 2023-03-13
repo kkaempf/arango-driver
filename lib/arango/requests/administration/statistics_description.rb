@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Administration Requests
     module Administration
+      # API: GET /_admin/statistics-description
       class StatisticsDescription < Arango::Request
         self.request_method = :get
 

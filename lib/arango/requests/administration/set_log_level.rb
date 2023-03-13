@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Administration Requests
     module Administration
+      # API: PUT /_admin/log/level
       class SetLogLevel < Arango::Request
         self.request_method = :put
 

@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Administration Requests
     module Administration
+      # API: GET /_admin/server/id
       class ServerId < Arango::Request
         self.request_method = :get
 

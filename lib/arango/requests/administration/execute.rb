@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Administration Requests
     module Administration
+      # API: POST /_admin/execute
       class Execute < Arango::Request
         self.request_method = :post
 

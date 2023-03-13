@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Administration Requests
     module Administration
+      # API: POST /_api/tasks
       class CreateTask < Arango::Request
         self.request_method = :post
 

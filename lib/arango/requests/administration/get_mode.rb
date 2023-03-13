@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Administration Requests
     module Administration
+      # API: GET /_admin/server/mode
       class GetMode < Arango::Request
         self.request_method = :get
 

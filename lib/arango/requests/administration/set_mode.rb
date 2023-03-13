@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Administration Requests
     module Administration
+      # API: PUT /_admin/server/mode
       class SetMode < Arango::Request
         self.request_method = :put
 
