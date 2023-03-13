@@ -272,7 +272,7 @@ module Arango
       #                          A value of 0 means that write-throttling will not be triggered.
       # return [Arango::Result]
       def wal_properties
-        result = request(get: "_admin/wal/properties")
+        result = Arango::Requests::Wal::GetProperties.execute(server: self)
         raise "WAL properties not available." if result.response_code >= 500
         result
       end

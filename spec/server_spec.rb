@@ -159,9 +159,8 @@ describe "Arango::Server" do
     end
 
     it "wal_properties" do
-      skip "Response code >= 500"
-      result = @server.wal_properties.log_file_size
-      expect(result).to eq 14
+      # can't be called on a cluster coordinator
+      expect { @server.wal_properties.log_file_size }.to raise_error Arango::Error
     end
   end
 
