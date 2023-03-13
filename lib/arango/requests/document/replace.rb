@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Arango Document Requests
     module Document
+      # API: PUT {/dbcontext}/_api/document/{collection}/{key}
       class Replace < Arango::Request
         self.request_method = :put
 

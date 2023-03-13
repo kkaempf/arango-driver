@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Arango Document Requests
     module Document
+      # API: POST {/dbcontext}/_api/document/{collection}#multiple
       class CreateMultiple < Arango::Request
         self.request_method = :post
 

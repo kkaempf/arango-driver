@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Arango Document Requests
     module Document
+      # API: DELETE {/dbcontext}/_api/document/{collection}/{key}
       class Delete < Arango::Request
         self.request_method = :delete
 

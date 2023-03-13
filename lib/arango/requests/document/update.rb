@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Arango Document Requests
     module Document
+      # API: PATCH {/dbcontext}/_api/document/{collection}/{key}
       class Update < Arango::Request
         self.request_method = :patch
 

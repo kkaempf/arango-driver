@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Arango Document Requests
     module Document
+      # API: PUT {/dbcontext}/_api/document/{collection}#get
       class GetMultiple < Arango::Request
         self.request_method = :put
 
