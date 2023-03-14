@@ -3,25 +3,39 @@ module Arango
   #
   # Arango Request
   # Implements REST API to Arango
+  # Used to define accessor classes to run `execute`
+  # Strictly internal. Not user accessible. Used to implement REST API representation classes.
   #
   class Request
     class << self
+      # execute Arango::Request
+      # @return [Arango::Result]
       def execute(**args)
         self.new(**args).execute
       end
 
+      # check if body exists
+      # @return [Boolean]
       def has_body?
         @has_body
       end
 
+      # check if body is an Array
+      # @return [Boolean]
       def body_is_array?
         @body_is_array
       end
 
+      # get body keys
+      # sets @body_keys to empty Hash (if unset)
+      # @return [Hash]
       def body_keys
         @body_keys ||= Hash.new
       end
 
+      # define body element
+      # @param name [String]
+      # @param option [Symbol] `:required` or `:optional`, defaults to `nil`
       def body(name, option = nil, &block)
         @has_body = true
         camel_name = name.to_s.camelize(:lower)
@@ -41,20 +55,26 @@ module Arango
         @current_nested_body = nil
       end
 
+      # make body an Array
       def body_array
         body_any
         @body_is_array = true
       end
 
+      # allow any body content
       def body_any
         @has_body = true
         @body_any_key_allowed = true
       end
 
+      # allow any body keys
       def body_any_key_allowed
         @body_any_key_allowed
       end
 
+      # define body key
+      # @param name [String]
+      # @param option [Symbol] `:required` or `:optional`, defaults to `nil`
       def key(name, option = nil)
         raise Arango::Error.new("No body context!") unless @current_nested_body
         camel_name = name.to_s.camelize(:lower)
@@ -68,14 +88,22 @@ module Arango
         @current_nested_body[name] = value
       end
 
+      # if request has a header defined
+      # @return [Boolean]
       def has_header?
         @has_header
       end
 
+      # get defined headers
+      # sets headers to empty Hash if undefined
+      # @return [Hash]
       def headers
         @headers ||= Hash.new
       end
 
+      # define header element
+      # @param name [String]
+      # @param option [Symbol] `:required` or `:optional`, defaults to `nil`
       def header(name, option = nil)
         @has_header = true
         key = name.underscore.downcase.to_sym
@@ -88,14 +116,22 @@ module Arango
         end
       end
 
+      # parameters defined ?
+      # @return [Boolean]
       def has_param?
         @has_param
       end
 
+      # get defined parameters
+      # sets parameters to empty Hash if undefined
+      # @return [Hash]
       def params
         @params ||= Hash.new
       end
 
+      # define parameter element
+      # @param name [String]
+      # @param option [Symbol] `:required` or `:optional`, defaults to `nil`
       def param(name, option = nil)
         @has_param = true
         camel_name = name.to_s.camelize(:lower)
@@ -108,26 +144,39 @@ module Arango
         end
       end
 
+      # define request method
+      # @param name [String] http request method (:GET, :PUT, :POST, :PATCH, :DELETE)
       def request_method= name
         @request_method = name
       end
 
+      # get request method
       def reqm
         @request_method
       end
 
+      # define uri template for API call
+      # @param template [String]
+      # see https://rubydoc.info/gems/addressable/Addressable/Template
       def uri_template= template
         @uri_template = Addressable::Template.new(template)
       end
 
+      # get uri template
       def uri_template
         @uri_template
       end
 
+      # get known http return codes and their meanings
+      # sets codes to empty hash if undefined
+      # @return [Hash]
       def codes
         @codes ||= {}
       end
 
+      # define known http code and its meaning
+      # @param number [Integer]
+      # @param message [String]
       def code(number, message)
         codes[number] = message
       end
@@ -140,6 +189,7 @@ module Arango
     attr_reader :formatted_body
     attr_reader :server
 
+    # create expanded URI, (from template, including keys) and http:// prefix
     def formatted_uri
       hash = {}
       hash['db_context'] = ['_db', database] if database
@@ -147,6 +197,12 @@ module Arango
       server.driver_instance.base_uri + self.class.uri_template.expand(hash)
     end
 
+    # create Arango::Request instance
+    # @param body [Hash] optional
+    # @param params [Hash] optional
+    # @param headers [Hash] optional
+    # @param args [Hash] optional
+    # @param server [Arango::Server] use to target correct server (and driver)
     def initialize(body: nil, params: {}, headers: nil, args: nil, server:)
       @server = server
       if args
@@ -162,6 +218,9 @@ module Arango
                         end
     end
 
+    # execute request
+    # @return [Arango::Result]
+    # @raise [Arango::Error]
     def execute
       response, response_code = server.driver_instance.execute_request(self.class.reqm, formatted_uri, formatted_headers, formatted_params, formatted_body)
 
@@ -185,6 +244,7 @@ module Arango
 
     private
 
+    # validate header according to defined header elements
     def validate_and_format_header!(headers)
       result = {}
       headers ||= {} #raise Arango::Error.new("No headers given!") unless headers
@@ -209,6 +269,7 @@ module Arango
       result
     end
 
+    # validate parameters according to defined parameters
     def validate_and_format_params!(params)
       result = {}
       params ||= {} #raise Arango::Error.new("No params given!") unless params
@@ -235,6 +296,7 @@ module Arango
       result
     end
 
+    # validate body according to defined body keys
     def validate_and_format_body!(body)
       result = {}
       body ||= {}
@@ -269,6 +331,7 @@ module Arango
       result
     end
 
+    # validate nested body
     def validate_and_format_nested!(nested_body, body_key, nested_keys)
       result = {}
       nested_keys.each do |key, options|
