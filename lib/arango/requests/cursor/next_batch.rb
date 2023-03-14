@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Cursor Requests
     module Cursor
+      # API: PUT /_api/cursor/{id}
       class NextBatch < Arango::Request
         self.request_method = :put
 

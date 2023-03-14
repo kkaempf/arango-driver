@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Cursor Requests
     module Cursor
+      # API: POST /_api/cursor
       class Create < Arango::Request
         self.request_method = :post
 
