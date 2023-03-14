@@ -12,9 +12,11 @@
 arangodb-driver is a drop-in replacement for the (archived) [arango-driver](https://github.com/janbiedermann/arango-driver).
 
 
-[ArangoDatabase](https://www.arangodb.com/) is a native multi-model database with flexible data models for document, graphs, and key-values.
-arangodb-driver is a Gem to use ArangoDB with Ruby. arangodb-driver is based on the [HTTP API of ArangoDB](https://docs.arangodb.com/3.8/HTTP/index.html)
-and its [Error Codes](https://www.arangodb.com/docs/3.8/appendix-error-codes.html).
+The [Arango database](https://www.arangodb.com/) is a native multi-model database with flexible data models for document, graphs, and key-values.
+
+arangodb-driver is a Gem to use ArangoDB with Ruby.
+
+arangodb-driver is based on the [HTTP API of ArangoDB](https://docs.arangodb.com/3.8/HTTP/index.html) and its [Error Codes](https://www.arangodb.com/docs/3.8/appendix-error-codes.html).
 
 The version of arangodb-driver follows the ArangoDB version, version 3.10.x of the driver is meant to be used with ArangoDB 3.10.y, where x and y may differ. 
 
@@ -34,7 +36,7 @@ To use it in your application: `require "arangodb-driver"`
 
 ## Community and Support
 
-Please open issues at the [arangodb-driver github project](https://github.com/kkaempf/arangodb-driver/issues)
+Please open issues at the arangodb-driver [github project](https://github.com/kkaempf/arangodb-driver/issues)
 
 # This is currently WIP, the information below is mostly obsolete. See spec/*_spec.rb files for currently supported things and usage.
 
