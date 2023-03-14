@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: PATCH {/dbcontext}/_api/foxx/configuration
       class UpdateConfiguration < Arango::Request
         self.request_method = :patch
 

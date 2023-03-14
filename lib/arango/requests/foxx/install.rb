@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Foxx Requests
     module Foxx
+      # API: POST {/dbcontext}/_api/foxx/service
       class Install < Arango::Request
         self.request_method = :post
 

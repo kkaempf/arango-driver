@@ -1,10 +1,12 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: PATCH {/dbcontext}/_api/foxx/service
       class Upgrade < Arango::Request
         self.request_method = :patch
 
-        self.uri_template = '{/dbcontext}/_api/foxx/upgrade'
+        self.uri_template = '{/dbcontext}/_api/foxx/service'
 
         param :mount, :required
         param :force

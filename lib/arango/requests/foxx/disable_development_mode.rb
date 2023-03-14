@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Foxx Requests
     module Foxx
+      # API: DELETE {/dbcontext}/_api/foxx/development
       class DisableDevelopmentMode < Arango::Request
         self.request_method = :delete
 

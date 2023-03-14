@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: POST {/dbcontext}/_api/foxx/tests
       class RunTests < Arango::Request
         self.request_method = :post
 

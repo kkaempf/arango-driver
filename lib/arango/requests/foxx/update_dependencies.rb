@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: PATCH {/dbcontext}/_api/foxx/dependencies
       class UpdateDependencies < Arango::Request
         self.request_method = :patch
 

@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Foxx Requests
     module Foxx
+      # API: POST {/dbcontext}/_api/foxx/commit
       class Commit < Arango::Request
         self.request_method = :post
 

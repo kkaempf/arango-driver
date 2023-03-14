@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Foxx Requests
     module Foxx
+      # API: GET {/dbcontext}/_api/foxx/service
       class Description < Arango::Request
         self.request_method = :get
 

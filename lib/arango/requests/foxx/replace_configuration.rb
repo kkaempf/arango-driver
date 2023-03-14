@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: PUT {/dbcontext}/_api/foxx/configuration
       class ReplaceConfiguration < Arango::Request
         self.request_method = :put
 

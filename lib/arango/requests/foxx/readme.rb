@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: GET {/dbcontext}/_api/foxx/readme
       class Readme < Arango::Request
         self.request_method = :get
 

@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Foxx Requests
     module Foxx
+      # API: DELETE {/dbcontext}/_api/foxx
       class Uninstall < Arango::Request
         self.request_method = :delete
 
