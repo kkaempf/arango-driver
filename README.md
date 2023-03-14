@@ -5,6 +5,10 @@
   <img src="https://raw.githubusercontent.com/kkaempf/arangodb-driver/master/docs/arangodb-driver.png" align="center"/>
 </h1>
 
+[![Gem Version](https://badge.fury.io/rb/arangodb-driver.svg)](https://badge.fury.io/rb/arangodb-driver)
+
+# About arangodb-driver
+
 arangodb-driver is a drop-in replacement for the (archived) [arango-driver](https://github.com/janbiedermann/arango-driver).
 
 
