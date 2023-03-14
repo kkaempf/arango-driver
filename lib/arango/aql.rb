@@ -7,13 +7,15 @@ module Arango
 
     class << self
 
-      # id: the query's id
-      # query: the query string (potentially truncated)
-      # bindVars: the bind parameter values used by the query
-      # started: the date and time when the query was started
-      # runTime: the query's run time up to the point the list of queries was queried
-      # state: the query's current execution state (as a string)
-      # stream: whether or not the query uses a streaming cursor
+      # @param query_hash [Hash]
+      # * id: the query's id
+      # * query: the query string (potentially truncated)
+      # * bindVars: the bind parameter values used by the query
+      # * started: the date and time when the query was started
+      # * runTime: the query's run time up to the point the list of queries was queried
+      # * state: the query's current execution state (as a string)
+      # * stream: whether or not the query uses a streaming cursor
+      # @return [Arango::AQL]
       def from_result_hash(query_hash)
         new_query_hash = query_hash.transform_keys { |k| k.to_s.underscore.to_sym }
         new_query_hash[:query_id] = query_hash.delete(:id)
@@ -21,6 +23,33 @@ module Arango
       end
     end
 
+    # Create a new AQL query
+    # @param query
+    # @param database
+    # @param batch_size
+    # @param bind_vars
+    # @param cache
+    # @param count
+    # @param fail_on_warning
+    # @param full_count
+    # @param intermediate_commit_count
+    # @param intermediate_commit_size
+    # @param max_plans
+    # @param max_transaction_size
+    # @param max_warning_count
+    # @param memory_limit
+    # @param optimizer_rules
+    # @param profile
+    # @param satellite_sync_wait
+    # @param skip_inaccessible_collections
+    # @param ttl
+    # @param query_id
+    # @param run_time
+    # @param started
+    # @param state
+    # @param stream
+    # @param block
+    # @param &ruby_block
     def initialize(query:, database:, batch_size: nil, bind_vars: nil, cache: nil, count: nil, fail_on_warning: nil, full_count: nil,
                    intermediate_commit_count: nil, intermediate_commit_size: nil, max_plans: nil, max_transaction_size: nil,
                    max_warning_count: nil, memory_limit: nil, optimizer_rules: nil, profile: nil, satellite_sync_wait: nil,
@@ -66,6 +95,8 @@ module Arango
       send(:optimizer_rules=, optimizer_rules) if optimizer_rules
     end
 
+    # set optimizer rules
+    # @param attrs [Hash]
     def optimizer_rules=(attrs)
       @optimizer_rules = attrs
       if attrs.nil?
@@ -75,6 +106,16 @@ module Arango
       end
     end
 
+    # @!attribute r failOnWarning
+    # @!attribute r fullCount
+    # @!attribute r intermediateCommitCount
+    # @!attribute r intermediateCommitSize
+    # @!attribute r maxPlans
+    # @!attribute r maxTransactionSize
+    # @!attribute r maxWarningCount
+    # @!attribute r profile
+    # @!attribute r satelliteSyncWait
+    # @!attribute r skipInaccessibleCollections
     %w[failOnWarning fullCount intermediateCommitCount intermediateCommitSize maxPlans maxTransactionSize maxWarningCount
      profile satelliteSyncWait skipInaccessibleCollections].each do |param_name|
       var_name = param_name.underscore.to_sym
@@ -89,10 +130,14 @@ module Arango
     attr_reader :server, :cached, :database, :extra, :id, :id_cache, :optimizer_rules, :result
     attr_reader :run_time, :started, :state, :stream
 
+    # check if more results are pending
+    # @return [Boolean]
     def has_more?
       @has_more
     end
 
+    # return Hash representation
+    # @return [Hash]
     def to_h
       {
         batchSize:   @batch_size,
@@ -109,6 +154,9 @@ module Arango
       }.delete_if{|_,v| v.nil?}
     end
 
+    # run an AQL request
+    # @param &block
+    # @return [Arango::AQL] (if no block passed)
     def request
       body = {
           batchSize:   @batch_size,
@@ -126,10 +174,13 @@ module Arango
       @block ? @block.call(self, result) : self
     end
 
+    # see {request}
     def execute
       request
     end
 
+    # get next result of query
+    # @return [Arango::AQL]
     def next
       if @has_more
         result = Arango::Requests::Cursor::NextBatch.execute(server: @server, args: { id: @id })
@@ -140,11 +191,13 @@ module Arango
       end
     end
 
+    # delete current query
     def delete
       Arango::Requests::Cursor::Delete.execute(server: @server, args: { id: @id })
       true
     end
 
+    # kill current query
     def kill
       Arango::Requests::AQL::KillQuery.execute(server: @server, args: { id: @query_id })
       true
@@ -152,6 +205,7 @@ module Arango
 
 # === PROPERTY QUERY ===
 
+    # explain current query
     def explain
       body = {
         query:    @query,
@@ -161,6 +215,7 @@ module Arango
       Arango::Requests::AQL::Explain.execute(server: @server, body: body)
     end
 
+    # parse current query
     def parse
       Arango::Requests::AQL::Parse.execute(server: @server, body: { query: @query })
     end
