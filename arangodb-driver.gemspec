@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = 'A simple ruby client for ArangoDB >= 3.10'
   s.description = "Ruby driver for ArangoDB's HTTP API\narangodb-driver is a drop-in replacement for the (unmaintained) arango-driver"
   s.require_paths = ['lib']
-  s.files         = `git ls-files -- {lib,LICENSE,README.md}`.split("\n") + %w[arango_opal.js]
+  s.files         = `git ls-files -- {lib,LICENSE,README.md}`.split("\n")
   s.add_dependency 'activesupport', '~> 7.0'
   s.add_dependency 'addressable', '~> 2.8'
   s.add_dependency 'escape_utils', '~> 1.3'

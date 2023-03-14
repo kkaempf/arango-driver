@@ -1,12 +1,10 @@
 require "json"
-require "opal"
 require "parser"
 require "unparser"
 require "method_source"
 require "escape_utils"
 require "active_support/core_ext/string"
 
-opal_path = Gem::Specification.find_by_name('opal').full_gem_path
 promise_path = File.join(opal_path, 'stdlib', 'promise.rb')
 require promise_path
 
