@@ -66,6 +66,9 @@ module Arango
     end
   end
 
+  # define batch_ variant
+  # @param target_class [Class]
+  # @param method_name [String]
   def self.request_class_method(target_class, method_name, &block)
     promise_method_name = "batch_#{method_name}".to_sym
     target_class.define_singleton_method(method_name) do |*args|
@@ -92,6 +95,9 @@ module Arango
     end
   end
 
+  # define batch_ variant
+  # @param target_class [Class]
+  # @param method_name [String]
   def self.multi_request_class_method(target_class, method_name, &block)
     promise_method_name = "batch_#{method_name}".to_sym
     target_class.define_singleton_method(method_name) do |*args|
@@ -122,6 +128,9 @@ module Arango
     end
   end
 
+  # define batch_ variant
+  # @param target_class [Class]
+  # @param method_name [String]
   def self.aql_request_class_method(target_class, method_name, &block)
     promise_method_name = "batch_#{method_name}".to_sym
     target_class.define_singleton_method(method_name) do |*args|
