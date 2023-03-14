@@ -3,6 +3,7 @@ module Arango
   module Graph
     # Arango Graph ClassMethods
     module ClassMethods
+      # Create Arango::Graph from hash
       def from_h(graph_hash, database: Arango.current_database)
         graph_hash = graph_hash.transform_keys { |k| k.to_s.underscore.to_sym }
         graph_hash.merge!(database: database) unless graph_hash.has_key?(:database)
@@ -22,6 +23,7 @@ module Arango
         from_h(hash, database: database)
       end
 
+      # extend Arango::Graph with class methods
       def self.extended(base)
 
         # Retrieves all graphs from the database.
@@ -70,6 +72,7 @@ module Arango
         end
       end
 
+      # Create Graph in database
       def create(is_smart: @is_smart, smart_graph_attribute: @smart_graph_attribute,
                  number_of_shards: @number_of_shards)
         body = {

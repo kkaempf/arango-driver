@@ -35,6 +35,7 @@ module Arango
         list_user_databases(server: server).map{ |db| Arango::Database.new(name: db, server: server).reload }
       end
 
+      # Create a new instance of self
       def create()
         self.new.create
       end
