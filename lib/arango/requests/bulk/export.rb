@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Bulk Requests
     module Bulk
+      # API: POST /_api/export
       class Export < Arango::Request
         self.request_method = :post
 
