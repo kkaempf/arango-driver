@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # GraphEdges Requests
     module GraphEdges
+      # API: GET {/dbcontext}/_api/edges/{id}
       class Read < Arango::Request
         self.request_method = :get
 
