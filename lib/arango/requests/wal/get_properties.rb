@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Wal Requests
     module Wal
+      # API: GET /_admin/wal/properties
       class GetProperties < Arango::Request
         self.request_method = :get
 

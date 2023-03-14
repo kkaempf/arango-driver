@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Wal Requests
     module Wal
+      # API: PUT /_admin/wal/flush
       class Flush < Arango::Request
         self.request_method = :put
 

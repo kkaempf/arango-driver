@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Wal Requests
     module Wal
+      # API: PUT /_admin/wal/properties
       class SetProperties < Arango::Request
         self.request_method = :put
 

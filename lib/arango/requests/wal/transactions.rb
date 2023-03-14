@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Wal Requests
     module Wal
+      # API: GET /_admin/wal/transactions
       class Transactions < Arango::Request
         self.request_method = :get
 
