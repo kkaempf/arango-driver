@@ -5,6 +5,9 @@ module Arango
   class Index
     include Arango::Helper::Satisfaction
     include Arango::Helper::DatabaseAssignment
+    # list indexes defined for collection
+    # @param collection [Arango::Collection]
+    # @return [Array of Arango::Index], or `nil` on error
     def self.list(collection:)
       params = { collection: collection.name }
       result = Arango::Requests::Index::ListAll.execute(server: collection.database.server, params: params)
@@ -18,12 +21,16 @@ module Arango
       nil
     end
 
-    # id is "CollectionName/XXXX"
+    # get collection for index
+    # @param collection [Arango::Collection]
+    # @param id [String] like "CollectionName/XXXX"
+    # @return [Arango::Result]
     def self.get collection:, id:
       c, i = id.split '/' # Requests would convert / to %2F
       Arango::Requests::Index::Get.execute(server: collection.database.server, args: {collection: c, id: i})
     end
 
+    # create new Arango::Index instance
     def initialize(collection:, fields:, cache_name: nil, deduplicate: nil, geo_json: nil, min_length: nil, sparse: nil,
                    type: "hash", unique: nil)
       @collection = collection
@@ -49,12 +56,16 @@ module Arango
     attr_accessor :cache_name, :deduplicate, :fields, :geo_json, :min_length, :sparse, :unique
     attr_reader :collection, :database, :server, :type, :name, :id, :key, :is_newly_created
 
+    # set index type
+    # @param type [String], one of hash skiplist persistent geo fulltext, or primary
     def type=(type)
       satisfy_category?(type, %w[hash skiplist persistent geo fulltext primary])
       @type = type
     end
     alias assign_type type=
 
+    # set index attributes from hash
+    # @param result [Hash]
     def assign_attributes(result)
       @id          = result[:id] || @id
       @name        = result[:name] || @name
@@ -72,6 +83,8 @@ module Arango
 
 # === DEFINE ===
 
+    # convert index to hash
+    # @return [Hash]
     def to_h
       {
         key: @key,
@@ -92,6 +105,7 @@ module Arango
 
 # === COMMANDS ===
 
+    # create Index in database
     def create
       body = {
         fields:      @fields,
@@ -129,10 +143,12 @@ module Arango
       self
     end
 
+    # String representation
     def to_s
       "Index(#{@id}:#{@type.to_sym}-#{@fields})"
     end
 
+    # delete datbase index
     def delete
       c, i = @id.split '/' # Requests would convert / to %2F
       Arango::Requests::Index::Delete.execute(server: @database.server, args: { collection: c, id: i})
