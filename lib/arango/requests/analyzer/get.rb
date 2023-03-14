@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Analyzer Requests
     module Analyzer
+      # API: GET /_api/analyzer/{name}
       class List < Arango::Request
         self.request_method = :get
 
