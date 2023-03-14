@@ -106,16 +106,26 @@ module Arango
       end
     end
 
-    # @!attribute r failOnWarning
-    # @!attribute r fullCount
-    # @!attribute r intermediateCommitCount
-    # @!attribute r intermediateCommitSize
-    # @!attribute r maxPlans
-    # @!attribute r maxTransactionSize
-    # @!attribute r maxWarningCount
-    # @!attribute r profile
-    # @!attribute r satelliteSyncWait
-    # @!attribute r skipInaccessibleCollections
+    # @!attribute [r] failOnWarning
+    #   @return [Boolean] fail on warning
+    # @!attribute [r] fullCount
+    #   @return [Integer] full count
+    # @!attribute [r] intermediateCommitCount
+    #   @return [Integer] intermediate commit count
+    # @!attribute [r] intermediateCommitSize
+    #   @return [Integer] intermediate commit size
+    # @!attribute [r] maxPlans
+    #   @return [Integer] max plans
+    # @!attribute [r] maxTransactionSize
+    #   @return [Integer] max transaction size
+    # @!attribute [r] maxWarningCount
+    #   @return [Integer] max warning count
+    # @!attribute [r] profile
+    #   @return [Hash] profile
+    # @!attribute [r] satelliteSyncWait
+    #   @return [Boolean] satellite sync wait
+    # @!attribute [r] skipInaccessibleCollections
+    #   @return [Boolean] skip inaccessible collections 
     %w[failOnWarning fullCount intermediateCommitCount intermediateCommitSize maxPlans maxTransactionSize maxWarningCount
      profile satelliteSyncWait skipInaccessibleCollections].each do |param_name|
       var_name = param_name.underscore.to_sym
