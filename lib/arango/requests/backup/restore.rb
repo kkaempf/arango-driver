@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Backup Requests
     module Backup
+      # API: POST /_admin/backup/restore
       class Restore < Arango::Request
         self.request_method = :post
 

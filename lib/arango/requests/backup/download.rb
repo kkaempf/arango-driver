@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Backup Requests
     module Backup
+      # API: POST /_admin/backup/download
       class Download < Arango::Request
         self.request_method = :post
 
