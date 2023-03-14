@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Cluster Requests
     module Cluster
+      # API: PUT /_admin/cluster/maintenance
       class Maintenance < Arango::Request
         self.request_method = :put
 
