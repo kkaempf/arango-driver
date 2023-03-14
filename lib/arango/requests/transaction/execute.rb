@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Transaction Requests
     module Transaction
+      # API: POST {/dbcontext}/_api/transaction
       class Execute < Arango::Request
         self.request_method = :post
 

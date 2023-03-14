@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Transaction Requests
     module Transaction
+      # API: PUT {/dbcontext}/_api/transaction/{id}
       class Commit < Arango::Request
         self.request_method = :put
 
