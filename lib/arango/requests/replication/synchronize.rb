@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Replication Requests
     module Replication
+      # API: PUT {/dbcontext}/_api/replication/sync
       class Synchronize < Arango::Request
         self.request_method = :put
 

@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Replication Requests
     module Replication
+      # API: PUT {/dbcontext}/_api/replication/make-slave
       class MakeSlave < Arango::Request
         self.request_method = :put
 

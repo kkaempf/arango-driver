@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Replication Requests
     module Replication
+      # API: POST {/dbcontext}/_api/replication/batch
       class CreateDumpBatch < Arango::Request
         self.request_method = :post
 

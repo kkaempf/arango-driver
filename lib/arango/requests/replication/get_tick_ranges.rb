@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Replication Requests
     module Replication
+      # API: GET {/dbcontext}/_api/wal/range
       class GetTickRanges < Arango::Request
         self.request_method = :get
 

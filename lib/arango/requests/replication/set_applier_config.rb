@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Replication Requests
     module Replication
+      # API: PUT {/dbcontext}/_api/replication/applier-config
       class SetApplierConfig < Arango::Request
         self.request_method = :put
 

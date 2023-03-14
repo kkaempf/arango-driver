@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Replication Requests
     module Replication
+      # API: DELETE {/dbcontext}/_api/replication/batch/{id}
       class DeleteDumpBatch < Arango::Request
         self.request_method = :delete
 
