@@ -5,26 +5,31 @@
 module Arango
   class << self
     # get current backend driver
+    # @return [Arango::Driver]
     def driver
       @driver_class
     end
 
     # set backend driver
+    # @param dc [Arango::Driver]
     def driver=(dc)
       @driver_class = dc
     end
 
     # get current server
+    # @return [Arango::Server]
     def current_server
       @current_server
     end
 
     # get current server's database
+    # @return [Arango::Database]
     def current_database
       @current_server.current_database
     end
 
     # set current server
+    # @param s [Arango::Server]
     def current_server=(s)
       @current_server = s
     end
