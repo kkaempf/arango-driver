@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # GraphTraversal Requests
     module GraphTraversal
+      # API: POST {/dbcontext}/_api/traversal
       class Execute < Arango::Request
         self.request_method = :post
 
