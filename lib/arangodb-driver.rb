@@ -5,16 +5,13 @@ require "method_source"
 require "escape_utils"
 require "active_support/core_ext/string"
 
-promise_path = File.join(opal_path, 'stdlib', 'promise.rb')
-require promise_path
-
 if RUBY_ENGINE == 'opal'
-
+  raise "Opal is unsupported"
 elsif RUBY_ENGINE == 'ruby'
   require "oj"
   require "typhoeus"
 elsif RUBY_ENGINE == 'jruby'
-
+  raise "JRuby is unsupported"
 end
 
 require 'zeitwerk'
