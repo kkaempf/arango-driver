@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # User Requests
     module User
+      # API: PUT {/dbcontext}/_api/user/{user}/database/{database}
       class SetDatabaseAccessLevel < Arango::Request
         self.request_method = :put
 

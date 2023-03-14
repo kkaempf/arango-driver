@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # User Requests
     module User
+      # API: GET {/dbcontext}/_api/user/{user}/database/
       class ListDatabases < Arango::Request
         self.request_method = :get
 

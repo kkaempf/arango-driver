@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # User Requests
     module User
+      # API: DELETE {/dbcontext}/_api/user/{user}
       class Delete < Arango::Request
         self.request_method = :delete
 

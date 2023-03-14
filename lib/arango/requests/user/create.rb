@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # User Requests
     module User
+      # API: POST {/dbcontext}/_api/user
       class Create < Arango::Request
         self.request_method = :post
 
