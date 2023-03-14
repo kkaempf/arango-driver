@@ -4,6 +4,8 @@ module Arango
   # Arango Error
   #
   class Error < StandardError
+    # Hash of Arango-specific error codes and their respective messages
+    # Used if an error condition cannot be (fully) expressed by an http status code
     ARANGODB_ERRORS = {
       no_other_aql_next: {
         code: 10001, message: "No other values with AQL next"
