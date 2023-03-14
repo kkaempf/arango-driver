@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # View Requests
     module View
+      # API: PUT {/dbcontext}/_api/view/{name}/rename
       class Rename < Arango::Request
         self.request_method = :put
 

@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # View Requests
     module View
+      # API: POST {/dbcontext}/_api/view#arangosearch
       class CreateSearchView < Arango::Request
         self.request_method = :post
 

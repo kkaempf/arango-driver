@@ -1,8 +1,10 @@
 module Arango
   module Requests
+    # View Requests
     module View
+      # API: PUT {/dbcontext}/_api/view/{name}/properties#ArangoSearch
       class SetSearchViewProperties < Arango::Request
-        self.request_method = :out
+        self.request_method = :put
 
         self.uri_template = '{/dbcontext}/_api/view/{name}/properties#ArangoSearch'
 

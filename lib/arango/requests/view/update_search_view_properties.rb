@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # View Requests
     module View
+      # API: PATCH {/dbcontext}/_api/view/{name}/properties#ArangoSearch
       class UpdateSearchViewProperties < Arango::Request
         self.request_method = :patch
 
