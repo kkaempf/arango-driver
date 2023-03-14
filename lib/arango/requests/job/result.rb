@@ -1,6 +1,8 @@
 module Arango
   module Requests
+    # Job Requests
     module Job
+      # API: PUT {/dbcontext}/_api/job/{id}
       class Result < Arango::Request
         self.request_method = :put
 

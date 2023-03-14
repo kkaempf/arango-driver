@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Job Requests
     module Job
+      # API: DELETE {/dbcontext}/_api/job/{type}#by_type
       class Delete < Arango::Request
         self.request_method = :delete
 

@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Job Requests
     module Job
+      # API: GET {/dbcontext}/_api/job/{id}
       class Get < Arango::Request
         self.request_method = :get
 

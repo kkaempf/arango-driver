@@ -1,7 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
+    # Job Requests
     module Job
+      # API: PUT {/dbcontext}/_api/job/{id}/cancel
       class Cancel < Arango::Request
         self.request_method = :put
 
