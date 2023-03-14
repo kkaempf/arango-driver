@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Task Requests
     module Task
+      # API: PUT /_api/tasks/{id}
       class CreateWithId < Arango::Request
         self.request_method = :put
 

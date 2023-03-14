@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Task Requests
     module Task
+      # API: DELETE /_api/tasks/{id}
       class Delete < Arango::Request
         self.request_method = :delete
 

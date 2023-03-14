@@ -1,8 +1,9 @@
 module Arango
   # Arango Requests
   module Requests
-  # Arango Requests
+    # Task Requests
     module Task
+      # API: GET /_api/tasks/{id}
       class Get < Arango::Request
         self.request_method = :get
 
